@@ -14,8 +14,8 @@ node_modules
 
 v1.1
 v1.2
-.vite
-.gitignore
+# .vite
+# .gitignore
 
 # Editor directories and files
 .vscode/*
