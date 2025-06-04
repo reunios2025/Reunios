@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>Redirect</title>
   <script>
-    window.location.href = '/Reunios/';
+    window.location.href = '/Reunios/' + window.location.pathname.replace('/Reunios', '') + window.location.search + window.location.hash;
   </script>
 </head>
 <body>
