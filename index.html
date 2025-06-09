@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/Reunios/logo.png" />
@@ -10,5 +10,46 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+
+      function toggleTheme() {
+        const isDark = document.documentElement.classList.toggle('dark');
+        if (isDark) {
+          localStorage.theme = 'dark';
+        } else {
+          localStorage.theme = 'light';
+        }
+      }
+      window.toggleTheme = toggleTheme;
+
+      document.addEventListener('DOMContentLoaded', () => {
+        const navBar = document.querySelector('nav') || document.querySelector('header') || document.getElementById('navbar') || document.getElementById('header');
+        if (navBar) {
+          const toggleButton = document.createElement('button');
+          toggleButton.textContent = 'Toggle Theme';
+          // Basic styling - can be improved with CSS classes
+          toggleButton.style.padding = '8px 12px';
+          toggleButton.style.marginLeft = '10px';
+          toggleButton.style.border = '1px solid #ccc';
+          toggleButton.style.borderRadius = '4px';
+          toggleButton.style.cursor = 'pointer';
+
+          toggleButton.addEventListener('click', () => {
+            if (window.toggleTheme) {
+              window.toggleTheme();
+            }
+          });
+          navBar.appendChild(toggleButton);
+        } else {
+          console.warn('Navigation bar element not found. Could not add theme toggle button.');
+        }
+      });
+    </script>
   </body>
 </html>
