@@ -15,11 +15,15 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const images = {
-  hero: "/src/assets/corosal-img17.jpg",
-  team: "/src/assets/corosal-img10.jpg",
-  guest1: "/src/assets/corosal-img1.jpg",
-  guest2: "/src/assets/corosal-img13.jpg",
-  guest3: "/src/assets/corosal-img14.jpg",
+  hero: "/Reunios/assets/corosal-img17.jpg",
+  corosal1: "/Reunios/assets/corosal-img14.jpg",
+  corosal2: "/Reunios/assets/corosal-img15.jpg",
+  team: "/Reunios/assets/corosal-img10.jpg",
+  guest1: "/Reunios/assets/corosal-img1.jpg",
+  guest2: "/Reunios/assets/corosal-img13.jpg",
+  guest3: "/Reunios/assets/corosal-img14.jpg",
+  mission: "/Reunios/assets/mission.png",
+  vision: "/Reunios/assets/vision.png"
 };
 
 const missionVisionItems = [
@@ -33,7 +37,7 @@ const missionVisionItems = [
     title: "Our Vision",
     description:
       "To be the trusted host brand for discerning travelers seeking stylish, hassle-free stays in prime locations worldwide.",
-    image: "/src/assets/vision.jpg", // Replace with actual vision image or reuse mission image
+    image: images.vision, // Replace with actual vision image or reuse mission image
   },
 ];
 
@@ -84,7 +88,7 @@ function About() {
         style={{ backgroundImage: `url(${images.hero})` }}
       >
         <div
-          className="bg-black bg-opacity-70 p-12 rounded-xl max-w-3xl text-center"
+          className=" backdrop:via-cyan-300 p-12 rounded-xl max-w-3xl text-center"
           data-aos="fade-up"
         >
           <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">

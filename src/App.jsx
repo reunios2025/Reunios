@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import Properties from './pages/Properties';
+// import Properties from './pages/Properties';
 import Careers from './pages/Careers';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
@@ -19,8 +19,8 @@ function App() {
     AOS.init({ duration: 800 });
   }, []);
   return (
-    <Router>
-      <div className="font-sans">
+    <Router basename="/Reunios">
+      <div className="font-sans" >
         <Navbar />
         <ScrollToTop />
         <Routes>

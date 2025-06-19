@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Slider from "react-slick";
+import HeroImg from "../../public/assets/Hero_home.png";
 import {
   SparklesIcon,
   StarIcon,
@@ -15,16 +16,26 @@ import {
 } from "@heroicons/react/24/outline";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ImageCarousel from '../components/TopDestinations';
 
 const images = {
-  hero: "/src/assets/corosal-img16.jpg",
-  about: "/src/assets/corosal-img13.jpg",
-  testimonial1: "/src/assets/corosal-img1.jpg",
-  testimonial2: "/src/assets/corosal-img13.jpg",
-  testimonial3: "/src/assets/corosal-img14.jpg",
-  carousel1: '/src/assets/corosal-img3.jpg',
-  carousel2: '/src/assets/corosal-img6.jpg',
-  carousel3: '/src/assets/corosal-img8.jpg'
+  hero: "/Reunios/assets/Hero_home.png",
+  about: "/Reunios/assets/corosal-img6.jpg",
+  family1: '/Reunios/assets/family_img1.png',
+  family2: '/Reunios/assets/family_img2.png',
+  family3: '/Reunios/assets/family_img3.png',
+  family4: '/Reunios/assets/family_img4.png',
+  testimonial1: "/Reunios/assets/corosal-img1.jpg",
+  testimonial2: "/Reunios/assets/corosal-img13.jpg",
+  testimonial3: "/Reunios/assets/corosal-img14.jpg",
+  carousel1: '/Reunios/assets/corosal-img3.jpg',
+  carousel2: '/Reunios/assets/corosal-img6.jpg',
+  carousel3: '/Reunios/assets/corosal-img8.jpg',
+  carousel4: '/Reunios/assets/corosal-img9.jpg',
+  carousel5: '/Reunios/assets/corosal-img10.jpg',
+  carousel6: '/Reunios/assets/corosal-img11.jpg',
+  carousel7: '/Reunios/assets/corosal-img12.jpg',
+  carousel8: '/Reunios/assets/corosal-img13.jpg'
 };
 
 function Home() {
@@ -32,7 +43,7 @@ function Home() {
     AOS.init({ duration: 900, once: true });
   }, []);
 
-  const carouselImages = [images.carousel1, images.carousel2, images.carousel3];
+  const carouselImages = [images.carousel1, images.carousel2, images.carousel3, images.carousel4,images.carousel5,images.carousel6,images.carousel7,images.carousel8];
 
   const carouselSettings = {
     dots: true,
@@ -126,29 +137,23 @@ function Home() {
       {/* Hero Section */}
       <section
         className="relative h-screen bg-fixed bg-center bg-cover flex items-center justify-center text-white"
-        style={{ backgroundImage: `url(${images.hero})` }}
+        style={{ backgroundImage: `url(${HeroImg})` }}
       >
         <div
-          className="bg-white/30 backdrop-blur-md backdrop-brightness-90 rounded-xl p-12 max-w-4xl text-center shadow-lg"
+          className="bg-white/30 backdrop-blur-md backdrop-brightness-90 rounded-xl p-12 max-w-4xl text-center shadow-lg w-full"
           data-aos="fade-up"
         >
-          <h1 className="text-6xl font-extrabold leading-tight mb-6 text-gray-900">
-            Discover Comfort & Style in Our Premium Rentals
+          <h1 className="text-6xl font-extrabold leading-tight mb-6 text-white">
+            Consistently Easy Stays
           </h1>
-          <p className="text-xl max-w-3xl mx-auto mb-10 text-gray-800">
-            Book with Sidharth’s exclusive collection of hotel-style apartments
-            offering unmatched hospitality and memorable stays.
+          <p className="text-xl max-w-3xl mx-auto mb-10 text-white">
+          The perfect vacation isn’t just where you stay it’s how effortlessly it all comes together.
+          We make every stay smooth, stress-free, and thoughtfully managed.
           </p>
           <div className="flex justify-center gap-8 flex-wrap">
             <Link
-              to="/contact"
-              className="border border-yellow-400 text-yellow-400 px-10 py-4 rounded-lg font-semibold hover:bg-yellow-400 hover:text-black transition transform hover:scale-105 shadow-lg focus:outline-yellow-500 focus:ring-2 focus:ring-yellow-400"
-            >
-              Book Now
-            </Link>
-            <Link
               to="/careers"
-              className="border border-yellow-400 text-yellow-400 px-10 py-4 rounded-lg font-semibold hover:bg-yellow-400 hover:text-black transition transform hover:scale-105 shadow-lg focus:outline-yellow-500 focus:ring-2 focus:ring-yellow-400"
+              className="bg-yellow-400 text-black border border-yellow-400 px-10 py-4 rounded-lg font-semibold hover:bg-yellow-500 hover:text-black transition transform hover:scale-105 shadow-lg focus:outline-yellow-500 focus:ring-2 focus:ring-yellow-400"
             >
               Join Our Team
             </Link>
@@ -163,33 +168,125 @@ function Home() {
         </div>
       </section>
 
+      <hr className="mt-10 border-yellow-400 border-t-2 max-w-6xl mx-auto" />
+
       {/* About Section */}
       <section className="relative py-20 bg-white overflow-hidden">
-        <div className="container mx-auto max-w-6xl px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <img
-            src={images.about}
-            alt="Host and guests enjoying the stay"
-            className="rounded-xl shadow-lg"
-            data-aos="fade-right"
-          />
-          <div data-aos="fade-left">
-            <h2 className="text-5xl font-bold mb-6 text-cyan-700 border-l-4 border-yellow-400 pl-4">
-              About Us
+        <div className="container mx-auto max-w-6xl px-6 flex flex-col gap-12 items-center relative z-10">
+
+          <div className="flex flex-col gap-6" data-aos="fade-left">
+            <h2 className="text-3xl font-bold text-black border-l-4pl-4">
+              You only get one shot at that perfect trip... don’t leave it to chance!
             </h2>
-            <p className="text-lg mb-6 leading-relaxed text-gray-800">
-              We are passionate hosts offering carefully curated hotel-style
-              apartments designed to provide exceptional comfort, convenience,
-              and local charm.
+            <p className="text-lg leading-relaxed text-gray-800">
+              We don’t just offer vacation rentals, we deliver peace of mind. 
             </p>
             <p className="text-lg leading-relaxed text-gray-700">
-              Every property is maintained to the highest standards with thoughtful
-              amenities and a personal touch that guests appreciate.
+              Our mission: reliable, stress-free stays in prime U.S. destinations, with no surprises.Whether it's a family vacation, reunion, or milestone trip, we eliminate the hassles: unexpected costs, delays, and confusion, so you can enjoy your time.
             </p>
+            <p className="text-lg leading-relaxed text-gray-800">
+              Our global team works behind the scenes to make every stay seamless, secure, and easy. That’s why we’re built on one simple principle: Consistently Easy Stays, managed by people who care about the experience you deserve.
+            </p>
+            <p className="text-lg leading-relaxed text-gray-800">
+              Join us in creating unforgettable, seamless experiences for our guests. Every stay, every time.
+            </p>
+          </div> 
+          <div className="w-full">
+            <Link
+              to="/careers"
+              className="bg-yellow-400 text-black border border-yellow-400 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 hover:text-black transition transform hover:scale-105 shadow-lg focus:outline-yellow-500 focus:ring-2 focus:ring-yellow-400"
+            >
+              Apply
+            </Link>
+          </div>
+          <div className="">
+            <div className="flex w-full gap-3" >
+              <img
+                src={images.family1}
+                alt="Host and guests enjoying the stay"
+                className="shadow-lg w-1/3" 
+                data-aos="fade-up"
+              />            
+              <div className="flex flex-col gap-3" >
+                <img
+                  src={images.family3}
+                  alt="Host and guests enjoying the stay"
+                  className="shadow-lg w-full h-full" 
+                  data-aos="fade-up"
+                />
+                <img
+                  src={images.family4}
+                  alt="Host and guests enjoying the stay"
+                  className="shadow-lg w-full h-full" 
+                  data-aos="fade-up"
+                />
+              </div>
+              <img
+                src={images.family2}
+                alt="Host and guests enjoying the stay"
+                className="shadow-lg w-1/3" 
+                data-aos="fade-up"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <hr className="my-20 border-yellow-400 border-t-2 max-w-6xl mx-auto" />
+      <hr className=" border-yellow-400 border-t-2 max-w-6xl mx-auto" />
+
+            {/* Top Destinations Section */}
+      <section className="relative py-20 bg-white overflow-hidden">
+        <div className="container mx-auto max-w-6xl px-6 flex flex-col gap-12 items-center justify-center relative z-10">
+          <div className="flex flex-col gap-15 justify-center items-center" data-aos="fade-left">
+            <h2 className="text-3xl font-bold text-black border-l-4pl-4">
+              Explore our top destination
+            </h2>
+            <p className="text-lg leading-relaxed text-gray-800 text-center max-w-11/12">
+              We step in where most rentals fall short, before the hassle hits. With professionally managed properties, real-time support, and top-tier locations, we eliminate surprises. No worries about keys, missing amenities, or waiting for help. Just show up, settle in, and enjoy the trip you planned.
+            </p>
+          </div> 
+          <div className="w-full">
+            <Link
+              to="/careers"
+              className="bg-yellow-400 text-black border border-yellow-400 px-8 py-3 rounded-lg font-semibold hover:bg-yellow-500 hover:text-black transition transform hover:scale-105 shadow-lg focus:outline-yellow-500 focus:ring-2 focus:ring-yellow-400"
+            >
+              Apply
+            </Link>
+          </div>
+          <ImageCarousel />
+          
+          <div className="">
+            <div className="flex w-full gap-3" >
+              <img
+                src={images.family1}
+                alt="Host and guests enjoying the stay"
+                className="shadow-lg w-1/3" 
+                data-aos="fade-up"
+              />            
+              <div className="flex flex-col gap-3" >
+                <img
+                  src={images.family3}
+                  alt="Host and guests enjoying the stay"
+                  className="shadow-lg w-full h-full" 
+                  data-aos="fade-up"
+                />
+                <img
+                  src={images.family4}
+                  alt="Host and guests enjoying the stay"
+                  className="shadow-lg w-full h-full" 
+                  data-aos="fade-up"
+                />
+              </div>
+              <img
+                src={images.family2}
+                alt="Host and guests enjoying the stay"
+                className="shadow-lg w-1/3" 
+                data-aos="fade-up"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Why Choose Us */}
       <section className="py-24 bg-yellow-50">

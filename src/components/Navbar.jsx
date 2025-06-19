@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+// import logo from "../../Reunios/assets/logo.png";
+import logo from "../../public/assets/logo.png";
 
 const navItems = [
   { name: "Home", to: "/" },
@@ -39,16 +41,16 @@ export default function Navbar() {
         }`}
         aria-label="Primary Navigation"
       >
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="mx-auto px-6 py-4 flex justify-between items-center w-full">
           {/* Logo */}
           <Link
             to="/"
-            className={`text-3xl font-extrabold tracking-wide ${
+            className={`text-3xl flex gap-4 font-extrabold tracking-wide ${
               isScrolled ? "text-cyan-700" : "text-white"
             } hover:text-cyan-600 transition-colors`}
             aria-label="Reunios Homepage"
           >
-            Reunios
+            <img src={logo} alt="" className=" aspect-square w-12" />Reunios
           </Link>
 
           {/* Desktop Menu */}

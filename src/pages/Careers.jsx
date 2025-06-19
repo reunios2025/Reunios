@@ -7,16 +7,16 @@ import {
   UserGroupIcon,
   SparklesIcon,
   LightBulbIcon,
-  CheckCircleIcon,
   EnvelopeIcon,
 } from "@heroicons/react/24/outline";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ApplyForm from "./ApplyForm";
 
 const teamImages = [
-  "/src/assets/corosal-img9.jpg",
-  "/src/assets/corosal-img10.jpg",
-  "/src/assets/corosal-img11.jpg",
+  "/Reunios/assets/corosal-img9.jpg",
+  "/Reunios/assets/corosal-img10.jpg",
+  "/Reunios/assets/corosal-img11.jpg",
 ];
 
 const employeeTestimonials = [
@@ -46,7 +46,7 @@ const employeeTestimonials = [
 const jobOpenings = [
   {
     id: 1,
-    title: "Guest Relations Specialist",
+    title: "Guest Communication Specialist",
     location: "Remote / On-site",
     description:
       "Manage guest communications, handle inquiries, and ensure outstanding service from booking to checkout.",
@@ -63,36 +63,36 @@ const jobOpenings = [
   },
   {
     id: 2,
-    title: "Property Maintenance Technician",
-    location: "On-site",
+    title: "Software Developer",
+    location: "Remote",
     description:
-      "Perform routine property maintenance and respond quickly to repair requests.",
+      "Develop, test, and maintain software solutions for improving business operations and guest experience.",
     responsibilities: [
-      "Inspect properties regularly",
-      "Handle repairs and coordinate vendors",
-      "Maintain safety and cleanliness standards",
+      "Write clean and efficient code",
+      "Collaborate with the team to design and implement software solutions",
+      "Troubleshoot and debug software issues",
     ],
     requirements: [
-      "Technical skills in repairs and maintenance",
-      "Attention to detail",
-      "Reliable and proactive",
+      "Proficiency in programming languages (e.g., JavaScript, Python, etc.)",
+      "Experience with software development methodologies",
+      "Problem-solving skills and attention to detail",
     ],
   },
   {
     id: 3,
-    title: "Housekeeping Supervisor",
-    location: "On-site",
+    title: "Pricing Analyst",
+    location: "Remote / On-site",
     description:
-      "Oversee cleaning teams to maintain the highest standards of cleanliness and guest satisfaction.",
+      "Analyze market data, set competitive pricing strategies, and optimize revenue for all listings.",
     responsibilities: [
-      "Manage cleaning schedules and staff",
-      "Perform quality inspections",
-      "Train and motivate housekeeping team",
+      "Monitor market trends and competitor pricing",
+      "Adjust pricing strategies based on demand and market conditions",
+      "Provide pricing reports and recommendations",
     ],
     requirements: [
-      "Experience in hospitality housekeeping",
-      "Leadership skills",
-      "Strong organizational abilities",
+      "Strong analytical and numerical skills",
+      "Experience with pricing models or revenue management",
+      "Proficiency in Excel or similar software",
     ],
   },
 ];
@@ -112,113 +112,53 @@ function Careers() {
     autoplaySpeed: 9000,
   };
 
-  // Modal and form state
   const [selectedJob, setSelectedJob] = useState(null);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    coverLetter: "",
-  });
-  const [formErrors, setFormErrors] = useState({});
-  const [submitMsg, setSubmitMsg] = useState("");
 
-  // Open modal and reset form
   const openApplyModal = (job) => {
     setSelectedJob(job);
-    setFormData({ name: "", email: "", coverLetter: "" });
-    setFormErrors({});
-    setSubmitMsg("");
-  };
-
-  // Close modal
-  const closeApplyModal = () => {
-    setSelectedJob(null);
-    setSubmitMsg("");
-    setFormErrors({});
-  };
-
-  // Validate form inputs
-  const validateForm = () => {
-    const errors = {};
-    if (!formData.name.trim()) errors.name = "Name is required.";
-    if (!formData.email.trim()) {
-      errors.email = "Email is required.";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = "Email is invalid.";
-    }
-    if (!formData.coverLetter.trim())
-      errors.coverLetter = "Cover letter is required.";
-    setFormErrors(errors);
-    return Object.keys(errors).length === 0;
-  };
-
-  // Submit form handler
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
-      // Simulate successful submission
-      setSubmitMsg(
-        `Thank you, ${formData.name}! Your application for "${selectedJob.title}" has been received.`
-      );
-      setFormData({ name: "", email: "", coverLetter: "" });
-      setFormErrors({});
-    }
   };
 
   return (
     <main className="font-sans text-gray-900">
-{/* Hero Section */}
-<section
-  className="relative h-[600px] bg-fixed bg-center bg-cover flex items-center"
-  style={{ backgroundImage: "url('/src/assets/corosal-img17.jpg')" }}
-  data-aos="fade-up"
->
-  {/* Gradient overlay */}
-  <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-70"></div>
-
-  <div className="relative max-w-6xl mx-auto px-6 text-white z-10 flex flex-col md:flex-row items-center justify-between gap-12">
-    {/* Left text */}
-    <div className="max-w-xl" data-aos="fade-right" data-aos-delay="300">
-      <h1 className="text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">
-        Build a Rewarding Career with Reunios
-      </h1>
-      <p className="text-xl leading-relaxed mb-10 drop-shadow-md">
-        Join a passionate team committed to delivering exceptional guest
-        experiences. Grow your skills and make a difference in the world of
-        hospitality.
-      </p>
-      <div className="flex flex-wrap gap-6">
-        <a
-          href="#job-openings"
-          className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition shadow-lg"
-        >
-          Explore Openings
-        </a>
-        <a
-          href="mailto:careers@sidharthhospitality.com"
-          className="inline-block border border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400 hover:text-black transition shadow-lg"
-        >
-          Contact Us
-        </a>
-      </div>
-    </div>
-
-    {/* Right image */}
-    <div
-      className="hidden md:block w-[400px] h-[400px] rounded-xl shadow-xl overflow-hidden"
-      data-aos="fade-left"
-      data-aos-delay="600"
-    >
-      <img
-        src="/src/assets/corosal-img10.jpg"
-        alt="Team collaboration"
-        className="w-full h-full object-cover"
-        loading="lazy"
-      />
-    </div>
-  </div>
-</section>
-
+      {/* Hero Section */}
+      <section
+        className="relative h-[600px] bg-fixed bg-center bg-cover flex items-center"
+        style={{ backgroundImage: "url('/Reunios/assets/corosal-img17.jpg')" }}
+        data-aos="fade-up"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-70"></div>
+        <div className="relative max-w-6xl mx-auto px-6 text-white z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="max-w-xl" data-aos="fade-right" data-aos-delay="300">
+            <h1 className="text-6xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+              Build a Rewarding Career with Reunios
+            </h1>
+            <p className="text-xl leading-relaxed mb-10 drop-shadow-md">
+              Join a passionate team committed to delivering exceptional guest
+              experiences. Grow your skills and make a difference in the world of
+              hospitality.
+            </p>
+            <div className="flex flex-wrap gap-6">
+              <a
+                href="#job-openings"
+                className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition shadow-lg"
+              >
+                Explore Openings
+              </a>
+              <a
+                href="mailto:careers@sidharthhospitality.com"
+                className="inline-block border border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-semibold hover:bg-yellow-400 hover:text-black transition shadow-lg"
+              >
+                Contact Us
+              </a>
+            </div>
+          </div>
+          <div
+            className="hidden md:block w-[400px] h-[400px] rounded-xl shadow-xl overflow-hidden"
+            data-aos="fade-left"
+            data-aos-delay="600"
+          ></div>
+        </div>
+      </section>
 
       {/* Work Culture Section */}
       <section
@@ -233,7 +173,6 @@ function Careers() {
           communication, and a shared passion for delivering outstanding guest
           experiences.
         </p>
-
         <div className="grid md:grid-cols-3 gap-16 text-center mb-20">
           <div>
             <UserGroupIcon className="mx-auto h-16 w-16 text-yellow-500 mb-6" />
@@ -246,7 +185,7 @@ function Careers() {
           <div>
             <SparklesIcon className="mx-auto h-16 w-16 text-yellow-500 mb-6" />
             <h3 className="text-2xl font-semibold mb-3">Excellence & Care</h3>
-            <p>
+            < p>
               Attention to detail and genuine care are at the heart of
               everything we do for our guests and teammates.
             </p>
@@ -260,23 +199,21 @@ function Careers() {
             </p>
           </div>
         </div>
-
-        {/* Office & Team Photos */}
         <div className="grid md:grid-cols-3 gap-8">
           <img
-            src="/src/assets/office1.jpg"
+            src="/Reunios/assets/office1.jpg"
             alt="Office workspace"
             className="rounded-xl shadow-lg object-cover h-64 w-full"
             loading="lazy"
           />
           <img
-            src="/src/assets/team1.jpg"
+            src="/Reunios/assets/team1.jpg"
             alt="Team collaboration"
             className="rounded-xl shadow-lg object-cover h-64 w-full"
             loading="lazy"
           />
           <img
-            src="/src/assets/office2.jpg"
+            src="/Reunios/assets/office2.jpg"
             alt="Office meeting"
             className="rounded-xl shadow-lg object-cover h-64 w-full"
             loading="lazy"
@@ -314,7 +251,6 @@ function Careers() {
                 </h3>
                 <p className="italic text-yellow-600 mb-4">{location}</p>
                 <p className="mb-4">{description}</p>
-
                 <div className="grid md:grid-cols-2 gap-8 mb-6">
                   <div>
                     <h4 className="font-semibold mb-2">Responsibilities</h4>
@@ -333,7 +269,6 @@ function Careers() {
                     </ul>
                   </div>
                 </div>
-
                 <button
                   onClick={() => openApplyModal({ id, title })}
                   className="bg-yellow-500 text-black px-8 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition"
@@ -373,126 +308,8 @@ function Careers() {
         </Slider>
       </section>
 
-      {/* Modal for application form */}
-      {selectedJob && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
-          onClick={closeApplyModal}
-          aria-modal="true"
-          role="dialog"
-        >
-          <div
-            className="bg-white rounded-xl p-8 max-w-lg w-full relative"
-            onClick={(e) => e.stopPropagation()} // prevent close on inner click
-          >
-            <button
-              onClick={closeApplyModal}
-              className="absolute top-4 right-4 text-gray-600 hover:text-gray-900 text-3xl font-bold"
-              aria-label="Close modal"
-            >
-              &times;
-            </button>
-
-            <h2 className="text-2xl font-bold mb-6">
-              Apply for {selectedJob.title}
-            </h2>
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="block font-semibold mb-1"
-                >
-                  Full Name
-                </label>
-                <input
-                  id="name"
-                  type="text"
-                  className={`w-full border rounded px-4 py-2 focus:outline-yellow-400 ${
-                    formErrors.name ? "border-red-500" : "border-gray-300"
-                  }`}
-                  value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
-                />
-                {formErrors.name && (
-                  <p className="text-red-600 mt-1">{formErrors.name}</p>
-                )}
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block font-semibold mb-1"
-                >
-                  Email Address
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  className={`w-full border rounded px-4 py-2 focus:outline-yellow-400 ${
-                    formErrors.email ? "border-red-500" : "border-gray-300"
-                  }`}
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                />
-                {formErrors.email && (
-                  <p className="text-red-600 mt-1">{formErrors.email}</p>
-                )}
-              </div>
-
-              <div>
-                <label htmlFor="position" className="block font-semibold mb-1">
-                  Position
-                </label>
-                <input
-                  id="position"
-                  type="text"
-                  value={selectedJob.title}
-                  disabled
-                  className="w-full border rounded px-4 py-2 bg-gray-100 cursor-not-allowed"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="coverLetter"
-                  className="block font-semibold mb-1"
-                >
-                  Cover Letter
-                </label>
-                <textarea
-                  id="coverLetter"
-                  rows="5"
-                  className={`w-full border rounded px-4 py-2 focus:outline-yellow-400 ${
-                    formErrors.coverLetter ? "border-red-500" : "border-gray-300"
-                  }`}
-                  value={formData.coverLetter}
-                  onChange={(e) =>
-                    setFormData({ ...formData, coverLetter: e.target.value })
-                  }
-                ></textarea>
-                {formErrors.coverLetter && (
-                  <p className="text-red-600 mt-1">{formErrors.coverLetter}</p>
-                )}
-              </div>
-
-              <button
-                type="submit"
-                className="bg-yellow-500 text-black w-full py-3 rounded-lg font-semibold hover:bg-yellow-600 transition"
-              >
-                Submit Application
-              </button>
-              {submitMsg && (
-                <p className="mt-4 text-green-600 font-semibold">{submitMsg}</p>
-              )}
-            </form>
-          </div>
-        </div>
-      )}
+      {/* Application Form Modal */}
+      {selectedJob && <ApplyForm selectedJob={selectedJob} setSelectedJob={setSelectedJob} />}
 
       {/* Contact CTA */}
       <section

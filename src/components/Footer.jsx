@@ -73,13 +73,13 @@ function Footer() {
                 href="mailto:contact@sidharthospitality.com"
                 className="hover:text-cyan-600 transition"
               >
-                contact@sidharthospitality.com
+                reservations@hottubcondos.com
               </a>
             </li>
             <li className="flex items-center gap-3">
               <MapPinIcon className="h-6 w-6 text-cyan-600" />
               <address className="not-italic">
-                123 Hospitality Lane,<br />San Francisco, CA, USA
+                Reunios near Shradha Medical, SBI colony<br />Pachora, Jalgaon, India
               </address>
             </li>
           </ul>

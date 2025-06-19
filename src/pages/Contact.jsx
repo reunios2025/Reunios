@@ -19,21 +19,21 @@ const testimonials = [
     role: "Guest",
     quote:
       "Quick response and excellent service. I felt valued and well taken care of!",
-    image: "/src/assets/corosal-img14.jpg",
+    image: "/Reunios/assets/corosal-img14.jpg",
   },
   {
     name: "Rohan M.",
     role: "Job Applicant",
     quote:
       "The team was very supportive during my job application process. Highly recommend working here!",
-    image: "/src/assets/corosal-img10.jpg",
+    image: "/Reunios/assets/corosal-img10.jpg",
   },
   {
     name: "Anjali S.",
     role: "Guest",
     quote:
       "Smooth communication and helpful staff made my stay truly memorable.",
-    image: "/src/assets/corosal-img13.jpg",
+    image: "/Reunios/assets/corosal-img13.jpg",
   },
 ];
 
@@ -119,7 +119,7 @@ function Contact() {
       {/* Hero */}
       <section
         className="relative h-[520px] bg-fixed bg-center bg-cover flex items-center justify-center text-white"
-        style={{ backgroundImage: "url('/src/assets/corosal-img15.jpg')" }}
+        style={{ backgroundImage: "url('/Reunios/assets/corosal-img15.jpg')" }}
         data-aos="fade-up"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-80"></div>
@@ -153,10 +153,10 @@ function Contact() {
           <ContactCard
             icon={<EnvelopeIcon className="h-12 w-12 text-yellow-600 mb-4" />}
             title="Email"
-            detail="contact@sidharthhospitality.com"
+            detail="reservations@hottubcondos.com"
             action={{
               text: "Send Email",
-              href: "mailto:contact@sidharthhospitality.com",
+              href: "mailto:reservations@hottubcondos.com",
             }}
           />
           <ContactCard
@@ -170,9 +170,9 @@ function Contact() {
             title="Office Location"
             detail={
               <>
-                123 Hospitality Lane,
+                Reunios near Shradha Medical, SBI colony
                 <br />
-                San Francisco, CA, USA
+                Pachora, Jalgaon, India
               </>
             }
           />
