@@ -98,7 +98,7 @@ const Careers = () => {
       <section
         className="relative h-screen flex items-center justify-center text-white bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
         }}
       >
         <div
