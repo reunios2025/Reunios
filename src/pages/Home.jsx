@@ -167,16 +167,18 @@ const Home = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-1/3">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl font-bold text-slate-900 mb-6">
                 No random hosts. Just consistent, reliable stays.
               </h2>
-              <div className="h-1 bg-gray-900 w-64 mb-8"></div>
+              <div className="h-1 bg-slate-900 w-64 mb-8"></div>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-10 bg-gray-300"></div>
+                  <div className="w-12 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <div className="w-6 h-6 bg-orange-500 rounded"></div>
+                  </div>
                   <div>
-                    <h3 className="font-bold text-gray-900">How Do We Work</h3>
-                    <p className="text-gray-700 text-sm mt-2">
+                    <h3 className="font-bold text-slate-900">How Do We Work</h3>
+                    <p className="text-slate-700 text-sm mt-2">
                       We choose the ideal properties: only in prime vacation
                       destinations, close to attractions, and with access to all
                       amenities.
@@ -184,29 +186,37 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-10 bg-gray-300"></div>
-                  <p className="text-gray-700 text-sm">
+                  <div className="w-12 h-10 bg-cyan-100 rounded-lg flex items-center justify-center">
+                    <div className="w-6 h-6 bg-cyan-500 rounded"></div>
+                  </div>
+                  <p className="text-slate-700 text-sm">
                     We prepare each unit for perfect stays: clean, fully
                     equipped, and exactly as advertised.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-10 bg-gray-300"></div>
-                  <p className="text-gray-700 text-sm">
+                  <div className="w-12 h-10 bg-slate-100 rounded-lg flex items-center justify-center">
+                    <div className="w-6 h-6 bg-slate-500 rounded"></div>
+                  </div>
+                  <p className="text-slate-700 text-sm">
                     We maintain clear and prompt communication: 24/7 support,
                     proactive updates, and no vague instructions.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-10 bg-gray-300"></div>
-                  <p className="text-gray-700 text-sm">
+                  <div className="w-12 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                    <div className="w-6 h-6 bg-orange-500 rounded"></div>
+                  </div>
+                  <p className="text-slate-700 text-sm">
                     We set strategic prices: you get great value without
                     sacrificing comfort or peace of mind.
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-10 bg-gray-300"></div>
-                  <p className="text-gray-700 text-sm">
+                  <div className="w-12 h-10 bg-cyan-100 rounded-lg flex items-center justify-center">
+                    <div className="w-6 h-6 bg-cyan-500 rounded"></div>
+                  </div>
+                  <p className="text-slate-700 text-sm">
                     We scale intelligently: with a global team and streamlined
                     processes, we grow without ever compromising service.
                   </p>
@@ -214,7 +224,7 @@ const Home = () => {
               </div>
             </div>
             <div className="lg:w-2/3">
-              <p className="text-lg text-gray-700 mb-8 text-justify leading-relaxed">
+              <p className="text-lg text-slate-700 mb-8 text-justify leading-relaxed">
                 We know job hunting can feel like a never-ending search. Whether
                 you're feeling undervalued, stuck in a role that doesn't inspire
                 you, or simply seeking better work-life balance. We believe work
