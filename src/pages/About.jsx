@@ -41,7 +41,10 @@ const About = () => {
           backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets/TEMP/66e35e62f5a79950576eccff46af63033a7f40a2?placeholderIfAbsent=true')`,
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
+        ></div>
         <div
           className="relative z-10 text-center max-w-4xl mx-auto px-6"
           data-aos="fade-up"
@@ -335,7 +338,7 @@ const About = () => {
               </p>
               <Link
                 to="/contact"
-                className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold 
+                className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold
                          hover:bg-yellow-500 transition-colors transform hover:scale-105 shadow-lg"
               >
                 Book now
@@ -365,7 +368,7 @@ const About = () => {
           </p>
           <Link
             to="/careers"
-            className="inline-block bg-yellow-700 text-white px-8 py-4 rounded-full font-semibold 
+            className="inline-block bg-yellow-700 text-white px-8 py-4 rounded-full font-semibold
                      hover:bg-yellow-800 transition-colors transform hover:scale-105 shadow-lg"
             data-aos="fade-up"
             data-aos-delay="200"
