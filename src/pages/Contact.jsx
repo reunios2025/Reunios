@@ -1,79 +1,11 @@
 import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import {
-  PhoneIcon,
-  EnvelopeIcon,
-  ChatBubbleOvalLeftEllipsisIcon,
-  MapPinIcon,
-  QuestionMarkCircleIcon,
-  ClockIcon,
-} from "@heroicons/react/24/outline";
 
-const testimonials = [
-  {
-    name: "Priya K.",
-    role: "Guest",
-    quote:
-      "Quick response and excellent service. I felt valued and well taken care of!",
-    image: "/Reunios/assets/corosal-img14.jpg",
-  },
-  {
-    name: "Rohan M.",
-    role: "Job Applicant",
-    quote:
-      "The team was very supportive during my job application process. Highly recommend working here!",
-    image: "/Reunios/assets/corosal-img10.jpg",
-  },
-  {
-    name: "Anjali S.",
-    role: "Guest",
-    quote:
-      "Smooth communication and helpful staff made my stay truly memorable.",
-    image: "/Reunios/assets/corosal-img13.jpg",
-  },
-];
-
-const faqs = [
-  {
-    question: "How quickly can I expect a response?",
-    answer:
-      "We strive to respond to all inquiries within 24 hours on business days.",
-  },
-  {
-    question: "What are your office hours?",
-    answer:
-      "Our office is open Monday through Friday, 9 AM to 6 PM PST. We monitor emails after hours.",
-  },
-  {
-    question: "Can I book directly through your website?",
-    answer:
-      "Currently, bookings are made via Airbnb listings or by contacting us directly.",
-  },
-  {
-    question: "How do I apply for a job?",
-    answer:
-      "You can explore open positions on our Careers page and submit your application online or via email.",
-  },
-];
-
-function Contact() {
+const Contact = () => {
   useEffect(() => {
-    AOS.init({ duration: 1200 });
+    AOS.init({ duration: 800, once: true });
   }, []);
-
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 700,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 9000,
-  };
 
   const [formData, setFormData] = useState({
     name: "",
@@ -81,316 +13,416 @@ function Contact() {
     subject: "",
     message: "",
   });
-  const [formErrors, setFormErrors] = useState({});
-  const [submitMsg, setSubmitMsg] = useState("");
-  const [faqOpenIndex, setFaqOpenIndex] = useState(null);
 
-  const validateForm = () => {
-    const errors = {};
-    if (!formData.name.trim()) errors.name = "Name is required.";
-    if (!formData.email.trim()) {
-      errors.email = "Email is required.";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = "Email is invalid.";
-    }
-    if (!formData.subject.trim()) errors.subject = "Subject is required.";
-    if (!formData.message.trim()) errors.message = "Message is required.";
-    setFormErrors(errors);
-    return Object.keys(errors).length === 0;
+  const [openFaq, setOpenFaq] = useState(null);
+
+  const faqs = [
+    {
+      question: "How quickly can I expect a response?",
+      answer:
+        "We strive to respond to all inquiries within 24 hours on business days.",
+    },
+    {
+      question: "What are your office hours?",
+      answer:
+        "Our office is open Monday through Friday, 9 AM to 6 PM PST. We monitor emails after hours.",
+    },
+    {
+      question: "Can I book directly through your website?",
+      answer:
+        "Currently, bookings are made via Airbnb listings or by contacting us directly.",
+    },
+    {
+      question: "How do I apply for a job?",
+      answer:
+        "You can explore open positions on our Careers page and submit your application online or via email.",
+    },
+  ];
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      setSubmitMsg(
-        `Thanks for reaching out, ${formData.name}! We will get back to you soon.`
-      );
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setFormErrors({});
-    }
-  };
-
-  const toggleFaq = (index) => {
-    setFaqOpenIndex(faqOpenIndex === index ? null : index);
+    // Handle form submission here
+    console.log("Form submitted:", formData);
   };
 
   return (
-    <main className="font-sans text-gray-900">
-      {/* Hero */}
+    <main className="min-h-screen">
+      {/* Hero Section */}
       <section
-        className="relative h-[520px] bg-fixed bg-center bg-cover flex items-center justify-center text-white"
-        style={{ backgroundImage: "url('/Reunios/assets/corosal-img15.jpg')" }}
-        data-aos="fade-up"
+        className="relative h-screen flex items-center justify-center text-white bg-cover bg-center"
+        style={{
+          backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets/TEMP/e5fd2742d1e022e0b07cc3fa369bd1640200d8e3?placeholderIfAbsent=true')`,
+        }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-80"></div>
-        <div className="relative max-w-5xl mx-auto px-6 text-center">
-          <h1 className="text-5xl font-extrabold mb-6 drop-shadow-lg">
-            We’re Here to Support You
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div
+          className="relative z-10 text-center max-w-4xl mx-auto px-6"
+          data-aos="fade-up"
+        >
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            We're Here to Support You
           </h1>
-          <p className="text-xl max-w-3xl mx-auto mb-12 drop-shadow-md">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Whether you have questions about your booking, career, or general
             inquiries, our team is ready to assist you quickly and
             professionally.
           </p>
           <a
             href="#contact-form"
-            className="inline-block bg-yellow-400 text-black px-10 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition shadow-lg"
+            className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold 
+                     hover:bg-yellow-500 transition-colors transform hover:scale-105 shadow-lg"
           >
             Contact Us Now
           </a>
         </div>
       </section>
 
-      {/* Contact Cards with subtle animation & consistent colors */}
-      <section
-        className="py-20 bg-yellow-50 max-w-6xl mx-auto px-6 rounded-xl shadow-lg mt-16"
-        data-aos="fade-up"
-      >
-        <h2 className="text-4xl font-bold mb-12 text-center">
-          Contact Information
-        </h2>
-        <div className="grid md:grid-cols-3 gap-12">
-          <ContactCard
-            icon={<EnvelopeIcon className="h-12 w-12 text-yellow-600 mb-4" />}
-            title="Email"
-            detail="reservations@hottubcondos.com"
-            action={{
-              text: "Send Email",
-              href: "mailto:reservations@hottubcondos.com",
-            }}
-          />
-          <ContactCard
-            icon={<PhoneIcon className="h-12 w-12 text-yellow-600 mb-4" />}
-            title="Phone"
-            detail="+1 (555) 123-4567"
-            action={{ text: "Call Now", href: "tel:+15551234567" }}
-          />
-          <ContactCard
-            icon={<MapPinIcon className="h-12 w-12 text-yellow-600 mb-4" />}
-            title="Office Location"
-            detail={
-              <>
+      {/* Contact Information Section */}
+      <section className="py-20 bg-yellow-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2
+            className="text-4xl font-bold text-gray-900 text-center mb-16"
+            data-aos="fade-up"
+          >
+            Contact Information
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Email Card */}
+            <div
+              className="bg-yellow-100 rounded-xl p-8 text-center shadow-lg"
+              data-aos="fade-up"
+            >
+              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-200 rounded-full flex items-center justify-center">
+                <svg
+                  className="w-8 h-8 text-yellow-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Email</h3>
+              <p className="text-gray-700 mb-6">
+                reservations@hottubcondos.com
+              </p>
+              <a
+                href="mailto:reservations@hottubcondos.com"
+                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold 
+                         hover:bg-yellow-600 transition-colors"
+              >
+                Send Email
+              </a>
+            </div>
+
+            {/* Phone Card */}
+            <div
+              className="bg-yellow-100 rounded-xl p-8 text-center shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-200 rounded-full flex items-center justify-center">
+                <svg
+                  className="w-8 h-8 text-yellow-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Phone</h3>
+              <p className="text-gray-700 mb-6">+1 (555) 123-4567</p>
+              <a
+                href="tel:+15551234567"
+                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold 
+                         hover:bg-yellow-600 transition-colors"
+              >
+                Call Now
+              </a>
+            </div>
+
+            {/* Location Card */}
+            <div
+              className="bg-yellow-100 rounded-xl p-8 text-center shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-200 rounded-full flex items-center justify-center">
+                <svg
+                  className="w-8 h-8 text-yellow-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Office Location
+              </h3>
+              <p className="text-gray-700">
                 Reunios near Shradha Medical, SBI colony
                 <br />
                 Pachora, Jalgaon, India
-              </>
-            }
-          />
-        </div>
-      </section>
-
-      {/* Contact Form with clean glass style */}
-      <section
-        id="contact-form"
-        className="py-24 bg-white max-w-4xl mx-auto px-6 rounded-xl shadow-md mt-20"
-        data-aos="fade-up"
-      >
-        <h2 className="text-4xl font-bold mb-10 text-center">Send a Message</h2>
-        <form onSubmit={handleSubmit} className="space-y-8">
-          <FormInput
-            label="Name"
-            id="name"
-            type="text"
-            value={formData.name}
-            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            error={formErrors.name}
-          />
-          <FormInput
-            label="Email"
-            id="email"
-            type="email"
-            value={formData.email}
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
-            error={formErrors.email}
-          />
-          <FormInput
-            label="Subject"
-            id="subject"
-            type="text"
-            value={formData.subject}
-            onChange={(e) =>
-              setFormData({ ...formData, subject: e.target.value })
-            }
-            error={formErrors.subject}
-          />
-          <FormTextarea
-            label="Message"
-            id="message"
-            value={formData.message}
-            onChange={(e) =>
-              setFormData({ ...formData, message: e.target.value })
-            }
-            error={formErrors.message}
-          />
-          <div className="text-center">
-            <button
-              type="submit"
-              className="bg-yellow-500 text-black font-semibold px-12 py-4 rounded-lg hover:bg-yellow-600 transition"
-            >
-              Send Message
-            </button>
+              </p>
+            </div>
           </div>
-          {submitMsg && (
-            <p className="text-green-600 font-semibold text-center mt-4">
-              {submitMsg}
-            </p>
-          )}
-        </form>
-      </section>
-
-      {/* FAQ Accordion */}
-      <section
-        className="py-24 bg-yellow-50 max-w-4xl mx-auto px-6 rounded-xl shadow-lg mt-20"
-        data-aos="fade-up"
-      >
-        <h2 className="text-4xl font-bold mb-12 text-center">FAQs</h2>
-        <div className="space-y-6">
-          {faqs.map(({ question, answer }, idx) => (
-            <FaqItem
-              key={idx}
-              question={question}
-              answer={answer}
-              isOpen={faqOpenIndex === idx}
-              onToggle={() => toggleFaq(idx)}
-            />
-          ))}
         </div>
       </section>
 
-      {/* Testimonials slider */}
-      <section
-        className="py-24 bg-white max-w-5xl mx-auto px-6 rounded-xl shadow-lg mt-20"
-        data-aos="fade-up"
-      >
-        <h2 className="text-4xl font-bold mb-12 text-center">
-          What People Say
-        </h2>
-        <TestimonialSlider testimonials={testimonials} />
+      {/* Contact Form Section */}
+      <section id="contact-form" className="py-20 bg-white">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2
+            className="text-4xl font-bold text-gray-900 text-center mb-12"
+            data-aos="fade-up"
+          >
+            Send a Message
+          </h2>
+
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-8"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-lg font-bold text-gray-900 mb-2"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                required
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-lg font-bold text-gray-900 mb-2"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                required
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="subject"
+                className="block text-lg font-bold text-gray-900 mb-2"
+              >
+                Subject
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleInputChange}
+                className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                required
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-lg font-bold text-gray-900 mb-2"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                value={formData.message}
+                onChange={handleInputChange}
+                className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                required
+              ></textarea>
+            </div>
+
+            <div className="text-center">
+              <button
+                type="submit"
+                className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold 
+                         hover:bg-yellow-600 transition-colors transform hover:scale-105 shadow-lg"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      {/* Image Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <img
+            src=""
+            alt="Family using laptop"
+            className="w-full max-w-2xl mx-auto h-96 bg-gray-300 rounded-lg shadow-lg"
+          />
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-yellow-50">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2
+            className="text-4xl font-bold text-gray-900 text-center mb-16"
+            data-aos="fade-up"
+          >
+            FAQs
+          </h2>
+
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-yellow-100 rounded-xl p-6 shadow-lg"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <div
+                  className="flex justify-between items-center cursor-pointer"
+                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                >
+                  <h3 className="text-lg font-bold text-gray-900">
+                    {faq.question}
+                  </h3>
+                  <span className="text-yellow-600 text-2xl">
+                    {openFaq === index ? "−" : "+"}
+                  </span>
+                </div>
+                {openFaq === index && (
+                  <p className="text-gray-700 mt-4 leading-relaxed">
+                    {faq.answer}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional FAQ Text */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-sm text-gray-700 leading-relaxed space-y-4">
+            <p>
+              <strong>
+                What makes Reunios different from other vacation rental
+                management companies?
+              </strong>
+            </p>
+
+            <p>
+              <strong>What types of properties does Reunios manage?</strong> We
+              specialize in vacation rentals that combine the comfort of home
+              with the convenience of a hotel. Our properties are strategically
+              located in top destinations across the U.S., offering guests the
+              best of both worlds.
+            </p>
+
+            <p>
+              At Reunios, we don't just offer a place to stay; we deliver a
+              seamless, peace of mind experience. Our focus is on clarity,
+              consistency, and reliability, ensuring every stay is well-managed,
+              from the moment you book to the moment you check out. We combine
+              the comfort of home with the convenience of hotel-style services,
+              so you can focus on what matters most, making lasting memories,
+              not worrying about logistics.
+            </p>
+
+            <p>
+              <strong>How does Reunios handle guest communication?</strong> We
+              maintain 24/7 support, ensuring that guests feel fully informed
+              and taken care of at all times. Our team responds quickly,
+              typically within an hour, so you can relax knowing we've got it
+              covered.
+            </p>
+
+            <p>
+              <strong>
+                Can I rent properties for longer stays or monthly bookings?
+              </strong>{" "}
+              While we focus on short-term stays (typically 3 to 7 nights), we
+              occasionally accommodate longer-term bookings depending on
+              property availability. Please reach out to us directly for custom
+              requests.
+            </p>
+
+            <p>
+              <strong>Are the properties family-friendly?</strong> Yes, most of
+              our properties are perfect for families and large groups. We offer
+              family-friendly amenities such as spacious living areas, multiple
+              bedrooms, pools, and lounges, designed to make your stay as
+              comfortable as possible.
+            </p>
+
+            <p>
+              <strong>
+                How do I know the property I book is exactly what is listed?
+              </strong>{" "}
+              We ensure all properties are accurately listed and
+              well-maintained. Our detailed, up-to-date listings include photos
+              and comprehensive descriptions, so you can book with confidence.
+              If you ever have questions about a property, our team is always
+              available to assist.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
   );
-}
-
-function ContactCard({ icon, title, detail, action }) {
-  return (
-    <div className="bg-yellow-100 rounded-xl p-8 shadow-md hover:shadow-xl transition cursor-pointer flex flex-col items-center text-center">
-      <div>{icon}</div>
-      <h3 className="text-xl font-semibold mt-4 mb-2">{title}</h3>
-      <p className="mb-4 text-gray-700">{detail}</p>
-      {action && (
-        <a
-          href={action.href}
-          className="bg-yellow-500 text-black px-6 py-2 rounded-lg font-semibold hover:bg-yellow-600 transition"
-        >
-          {action.text}
-        </a>
-      )}
-    </div>
-  );
-}
-
-function FormInput({ label, id, type, value, onChange, error }) {
-  return (
-    <div>
-      <label htmlFor={id} className="block text-lg font-semibold mb-2">
-        {label}
-      </label>
-      <input
-        id={id}
-        type={type}
-        className={`w-full p-4 rounded-lg border ${
-          error ? "border-red-500" : "border-gray-300"
-        } focus:outline-yellow-400`}
-        value={value}
-        onChange={onChange}
-      />
-      {error && <p className="text-red-600 mt-1">{error}</p>}
-    </div>
-  );
-}
-
-function FormTextarea({ label, id, value, onChange, error }) {
-  return (
-    <div>
-      <label htmlFor={id} className="block text-lg font-semibold mb-2">
-        {label}
-      </label>
-      <textarea
-        id={id}
-        rows="6"
-        className={`w-full p-4 rounded-lg border ${
-          error ? "border-red-500" : "border-gray-300"
-        } focus:outline-yellow-400`}
-        value={value}
-        onChange={onChange}
-      />
-      {error && <p className="text-red-600 mt-1">{error}</p>}
-    </div>
-  );
-}
-
-function FaqItem({ question, answer, isOpen, onToggle }) {
-  return (
-    <div
-      onClick={onToggle}
-      className={`cursor-pointer rounded-xl p-6 bg-yellow-100 shadow-md transition ${
-        isOpen ? "shadow-xl bg-yellow-200" : ""
-      }`}
-    >
-      <div className="flex justify-between items-center">
-        <h3 className="text-lg font-semibold">{question}</h3>
-        <svg
-          className={`w-6 h-6 transition-transform ${
-            isOpen ? "rotate-180" : ""
-          }`}
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
-      </div>
-      {isOpen && <p className="mt-4 text-gray-800">{answer}</p>}
-    </div>
-  );
-}
-
-function TestimonialSlider({ testimonials }) {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 700,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 9000,
-  };
-  return (
-    <Slider {...settings} className="rounded-xl">
-      {testimonials.map(({ name, role, quote, image }, i) => (
-        <div
-          key={i}
-          className="bg-yellow-100 rounded-xl p-10 text-gray-800 flex flex-col items-center"
-        >
-          <img
-            src={image}
-            alt={name}
-            className="w-28 h-28 rounded-full mb-6 object-cover shadow-md"
-          />
-          <p className="text-xl italic mb-6 max-w-xl text-center">"{quote}"</p>
-          <p className="font-semibold text-2xl">{name}</p>
-          <p className="text-yellow-600">{role}</p>
-        </div>
-      ))}
-    </Slider>
-  );
-}
+};
 
 export default Contact;
