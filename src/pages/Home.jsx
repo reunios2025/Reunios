@@ -9,7 +9,7 @@ const Home = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-cyan-50 via-white to-indigo-50">
+    <main className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-slate-100">
       {/* Hero Section */}
       <section
         className="relative h-screen flex items-center justify-center text-white bg-cover bg-center"
@@ -64,7 +64,7 @@ const Home = () => {
               </p>
               <Link
                 to="/careers"
-                className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold 
+                className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold
                          hover:bg-yellow-500 transition-colors transform hover:scale-105 shadow-lg"
               >
                 Apply Now!
@@ -446,7 +446,7 @@ const Home = () => {
           </p>
           <Link
             to="/careers"
-            className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold 
+            className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold
                      hover:bg-yellow-500 transition-colors transform hover:scale-105 shadow-lg"
             data-aos="fade-up"
             data-aos-delay="100"
