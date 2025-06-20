@@ -76,39 +76,36 @@ const Home = () => {
             </Link>
           </div>
 
-          {/* Images Grid Below */}
+          {/* Images Grid Below - Original Layout */}
           <div
-            className="grid grid-cols-4 gap-4 h-96"
+            className="flex justify-center"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            {/* Large image on left - spans 2 columns and full height */}
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ff005d0905a6911b8ea78640d8e60edf97f8408?placeholderIfAbsent=true"
-              alt="Vacation rental property"
-              className="col-span-2 row-span-2 w-full h-full object-cover rounded-lg"
-            />
-
-            {/* Top right image */}
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b8a8f9164801424651b8417846b97f942afb919?placeholderIfAbsent=true"
-              alt="Vacation rental interior"
-              className="col-span-1 w-full h-44 object-cover rounded-lg"
-            />
-
-            {/* Second image on right */}
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/0aa25b852687dc4d3bfda92a56218f62f31342a7?placeholderIfAbsent=true"
-              alt="Vacation rental amenities"
-              className="col-span-1 w-full h-44 object-cover rounded-lg"
-            />
-
-            {/* Bottom right image - spans 2 columns */}
-            <img
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1bbc683eee7d7de4b12c3de86a3b821a5b746181?placeholderIfAbsent=true"
-              alt="Vacation rental exterior"
-              className="col-span-2 w-full h-44 object-cover rounded-lg"
-            />
+            <div className="grid grid-cols-2 gap-4 max-w-2xl">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ff005d0905a6911b8ea78640d8e60edf97f8408?placeholderIfAbsent=true"
+                alt="Vacation rental property"
+                className="w-full h-96 object-cover rounded-lg"
+              />
+              <div className="space-y-4">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b8a8f9164801424651b8417846b97f942afb919?placeholderIfAbsent=true"
+                  alt="Vacation rental interior"
+                  className="w-full h-44 object-cover rounded-lg"
+                />
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/0aa25b852687dc4d3bfda92a56218f62f31342a7?placeholderIfAbsent=true"
+                  alt="Vacation rental amenities"
+                  className="w-full h-44 object-cover rounded-lg"
+                />
+              </div>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/1bbc683eee7d7de4b12c3de86a3b821a5b746181?placeholderIfAbsent=true"
+                alt="Vacation rental exterior"
+                className="w-full h-96 object-cover rounded-lg col-span-1"
+              />
+            </div>
           </div>
         </div>
       </section>
