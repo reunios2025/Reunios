@@ -18,24 +18,54 @@ const Contact = () => {
 
   const faqs = [
     {
-      question: "How quickly can I expect a response?",
+      question: "How do I make a reservation?",
       answer:
-        "We strive to respond to all inquiries within 24 hours on business days.",
+        "You can book directly through our Airbnb listings or contact our reservations team at reservations@hottubcondos.com. We'll help you find the perfect property for your stay and guide you through the booking process.",
     },
     {
-      question: "What are your office hours?",
+      question: "What is your cancellation policy?",
       answer:
-        "Our office is open Monday through Friday, 9 AM to 6 PM PST. We monitor emails after hours.",
+        "Our cancellation policy varies by property and booking platform. For Airbnb bookings, the standard Airbnb cancellation policy applies. For direct bookings, we offer flexible cancellation up to 48 hours before check-in for a full refund, with some exceptions during peak seasons.",
     },
     {
-      question: "Can I book directly through your website?",
+      question: "What amenities are included in your properties?",
       answer:
-        "Currently, bookings are made via Airbnb listings or by contacting us directly.",
+        "Our properties feature premium amenities including high-speed WiFi, fully equipped kitchens, hot tubs, pools, comfortable living spaces, and hotel-quality linens. Specific amenities vary by property - check individual listings for detailed amenity lists.",
     },
     {
-      question: "How do I apply for a job?",
+      question: "Is there 24/7 customer support during my stay?",
       answer:
-        "You can explore open positions on our Careers page and submit your application online or via email.",
+        "Yes! We provide 24/7 guest support throughout your entire stay. Our team typically responds within 1 hour and is available via phone, email, or text message for any questions or assistance you may need.",
+    },
+    {
+      question: "Are your properties family-friendly?",
+      answer:
+        "Absolutely! Most of our properties are designed with families in mind, featuring multiple bedrooms, spacious living areas, kid-friendly amenities, and safety features. Many properties also include pools, game rooms, and outdoor spaces perfect for family gatherings.",
+    },
+    {
+      question: "What are your check-in and check-out times?",
+      answer:
+        "Standard check-in is at 4:00 PM and check-out is at 11:00 AM. We offer flexible check-in/check-out times when possible - just let us know your needs and we'll do our best to accommodate special requests.",
+    },
+    {
+      question: "Do you allow pets?",
+      answer:
+        "Pet policies vary by property. Some of our properties are pet-friendly with additional fees, while others do not allow pets. Please check the specific property listing or contact us directly to confirm pet policies for your desired dates.",
+    },
+    {
+      question: "What happens if there's an issue during my stay?",
+      answer:
+        "If you encounter any issues during your stay, contact our 24/7 support team immediately. We're committed to resolving problems quickly and ensuring your stay meets our high standards. We'll work diligently to address any concerns and make things right.",
+    },
+    {
+      question: "Are there minimum stay requirements?",
+      answer:
+        "Minimum stay requirements vary by property and season. Most properties have a 2-3 night minimum, with longer minimums during holidays and peak seasons. Check individual property listings for specific requirements.",
+    },
+    {
+      question: "What payment methods do you accept?",
+      answer:
+        "We accept all major credit cards (Visa, MasterCard, American Express, Discover) for direct bookings. For Airbnb bookings, payment is processed through Airbnb's platform which accepts various payment methods including credit cards, PayPal, and digital wallets.",
     },
   ];
 
@@ -77,7 +107,7 @@ const Contact = () => {
           </p>
           <a
             href="#contact-form"
-            className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold 
+            className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold
                      hover:bg-yellow-500 transition-colors transform hover:scale-105 shadow-lg"
           >
             Contact Us Now
@@ -122,7 +152,7 @@ const Contact = () => {
               </p>
               <a
                 href="mailto:reservations@hottubcondos.com"
-                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold 
+                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold
                          hover:bg-yellow-600 transition-colors"
               >
                 Send Email
@@ -154,7 +184,7 @@ const Contact = () => {
               <p className="text-gray-700 mb-6">+1 (555) 123-4567</p>
               <a
                 href="tel:+15551234567"
-                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold 
+                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold
                          hover:bg-yellow-600 transition-colors"
               >
                 Call Now
@@ -292,7 +322,7 @@ const Contact = () => {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold 
+                className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold
                          hover:bg-yellow-600 transition-colors transform hover:scale-105 shadow-lg"
               >
                 Send Message
