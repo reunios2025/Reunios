@@ -232,103 +232,104 @@ const Contact = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section id="contact-form" className="py-20 bg-white">
+      <section id="contact-form" className="py-20 bg-slate-100">
         <div className="max-w-3xl mx-auto px-6">
           <h2
-            className="text-4xl font-bold text-gray-900 text-center mb-12"
+            className="text-4xl font-bold text-slate-900 text-center mb-12"
             data-aos="fade-up"
           >
             Send a Message
           </h2>
 
-          <form
-            onSubmit={handleSubmit}
-            className="space-y-8"
+          <div
+            className="bg-white rounded-2xl p-8 shadow-lg"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div>
-              <label
-                htmlFor="name"
-                className="block text-lg font-bold text-gray-900 mb-2"
-              >
-                Name
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                required
-              />
-            </div>
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-lg font-bold text-slate-900 mb-2"
+                >
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-4 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  required
+                />
+              </div>
 
-            <div>
-              <label
-                htmlFor="email"
-                className="block text-lg font-bold text-gray-900 mb-2"
-              >
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                required
-              />
-            </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-lg font-bold text-slate-900 mb-2"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-4 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  required
+                />
+              </div>
 
-            <div>
-              <label
-                htmlFor="subject"
-                className="block text-lg font-bold text-gray-900 mb-2"
-              >
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleInputChange}
-                className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                required
-              />
-            </div>
+              <div>
+                <label
+                  htmlFor="subject"
+                  className="block text-lg font-bold text-slate-900 mb-2"
+                >
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-4 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  required
+                />
+              </div>
 
-            <div>
-              <label
-                htmlFor="message"
-                className="block text-lg font-bold text-gray-900 mb-2"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                rows="6"
-                value={formData.message}
-                onChange={handleInputChange}
-                className="w-full px-4 py-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                required
-              ></textarea>
-            </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-lg font-bold text-slate-900 mb-2"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  value={formData.message}
+                  onChange={handleInputChange}
+                  className="w-full px-4 py-4 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+                  required
+                ></textarea>
+              </div>
 
-            <div className="text-center">
-              <button
-                type="submit"
-                className="bg-yellow-500 text-black px-8 py-4 rounded-lg font-semibold
-                         hover:bg-yellow-600 transition-colors transform hover:scale-105 shadow-lg"
-              >
-                Send Message
-              </button>
-            </div>
-          </form>
+              <div className="text-center">
+                <button
+                  type="submit"
+                  className="bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold
+                           hover:bg-orange-600 transition-colors transform hover:scale-105 shadow-lg"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
 
