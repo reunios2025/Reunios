@@ -17,7 +17,10 @@ const Home = () => {
           backgroundImage: `url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
+        ></div>
         <div
           className="relative z-10 text-center max-w-4xl mx-auto px-6"
           data-aos="fade-up"
