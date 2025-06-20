@@ -38,7 +38,7 @@ const About = () => {
       <section
         className="relative h-screen flex items-center justify-center text-white bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets/TEMP/66e35e62f5a79950576eccff46af63033a7f40a2?placeholderIfAbsent=true')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2075&q=80')`,
         }}
       >
         <div
