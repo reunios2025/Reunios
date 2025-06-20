@@ -451,7 +451,7 @@ const Home = () => {
       {/* Join Our Team Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <p className="text-xl text-gray-700 mb-8" data-aos="fade-up">
+          <p className="text-xl text-slate-700 mb-8" data-aos="fade-up">
             Join our team and be part of a brand that makes every guest stay
             smooth, stress-free, and memorable. We're always looking for
             passionate, driven individuals to help us deliver Consistently Easy
@@ -459,8 +459,8 @@ const Home = () => {
           </p>
           <Link
             to="/careers"
-            className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold
-                     hover:bg-yellow-500 transition-colors transform hover:scale-105 shadow-lg"
+            className="inline-block bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold
+                     hover:bg-orange-600 transition-colors transform hover:scale-105 shadow-lg"
             data-aos="fade-up"
             data-aos-delay="100"
           >
