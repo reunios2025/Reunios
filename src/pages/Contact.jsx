@@ -116,10 +116,10 @@ const Contact = () => {
       </section>
 
       {/* Contact Information Section */}
-      <section className="py-20 bg-yellow-50">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <h2
-            className="text-4xl font-bold text-gray-900 text-center mb-16"
+            className="text-4xl font-bold text-slate-900 text-center mb-16"
             data-aos="fade-up"
           >
             Contact Information
@@ -128,12 +128,12 @@ const Contact = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Email Card */}
             <div
-              className="bg-yellow-100 rounded-xl p-8 text-center shadow-lg"
+              className="bg-slate-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
               data-aos="fade-up"
             >
-              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-200 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-orange-100 rounded-full flex items-center justify-center">
                 <svg
-                  className="w-8 h-8 text-yellow-700"
+                  className="w-8 h-8 text-orange-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -146,14 +146,14 @@ const Contact = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Email</h3>
-              <p className="text-gray-700 mb-6">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Email</h3>
+              <p className="text-slate-600 mb-6">
                 reservations@hottubcondos.com
               </p>
               <a
                 href="mailto:reservations@hottubcondos.com"
-                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold
-                         hover:bg-yellow-600 transition-colors"
+                className="inline-block bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold
+                         hover:bg-orange-600 transition-colors"
               >
                 Send Email
               </a>
@@ -161,13 +161,13 @@ const Contact = () => {
 
             {/* Phone Card */}
             <div
-              className="bg-yellow-100 rounded-xl p-8 text-center shadow-lg"
+              className="bg-slate-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-200 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-cyan-100 rounded-full flex items-center justify-center">
                 <svg
-                  className="w-8 h-8 text-yellow-700"
+                  className="w-8 h-8 text-cyan-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -180,12 +180,12 @@ const Contact = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Phone</h3>
-              <p className="text-gray-700 mb-6">+1 (555) 123-4567</p>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Phone</h3>
+              <p className="text-slate-600 mb-6">+1 (555) 123-4567</p>
               <a
                 href="tel:+15551234567"
-                className="inline-block bg-yellow-500 text-black px-6 py-3 rounded-lg font-semibold
-                         hover:bg-yellow-600 transition-colors"
+                className="inline-block bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold
+                         hover:bg-cyan-600 transition-colors"
               >
                 Call Now
               </a>
@@ -193,13 +193,13 @@ const Contact = () => {
 
             {/* Location Card */}
             <div
-              className="bg-yellow-100 rounded-xl p-8 text-center shadow-lg"
+              className="bg-slate-50 rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-200 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-slate-200 rounded-full flex items-center justify-center">
                 <svg
-                  className="w-8 h-8 text-yellow-700"
+                  className="w-8 h-8 text-slate-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -218,10 +218,10 @@ const Contact = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
                 Office Location
               </h3>
-              <p className="text-gray-700">
+              <p className="text-slate-600 mb-4">
                 Reunios near Shradha Medical, SBI colony
                 <br />
                 Pachora, Jalgaon, India
