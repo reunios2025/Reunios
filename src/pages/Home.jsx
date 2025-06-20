@@ -43,29 +43,29 @@ const Home = () => {
                 You only get one shot at that perfect trip... don't leave it to
                 chance!
               </h2>
-              <p className="text-xl text-gray-700 mb-6">
+              <p className="text-xl text-slate-700 mb-6">
                 We don't just offer vacation rentals, we deliver peace of mind.
               </p>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-slate-600 mb-6">
                 Our mission: reliable, stress-free stays in prime U.S.
                 destinations, with no surprises. Whether it's a family vacation,
                 reunion, or milestone trip, we eliminate the hassles: unexpected
                 costs, delays, and confusion, so you can enjoy your time.
               </p>
-              <p className="text-lg text-gray-600 mb-6">
+              <p className="text-lg text-slate-600 mb-6">
                 Our global team works behind the scenes to make every stay
                 seamless, secure, and easy. That's why we're built on one simple
                 principle: Consistently Easy Stays, managed by people who care
                 about the experience you deserve.
               </p>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-slate-600 mb-8">
                 Join us in creating unforgettable, seamless experiences for our
                 guests. Every stay, every time.
               </p>
               <Link
                 to="/careers"
-                className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold
-                         hover:bg-yellow-500 transition-colors transform hover:scale-105 shadow-lg"
+                className="inline-block bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold
+                         hover:bg-orange-600 transition-colors transform hover:scale-105 shadow-lg"
               >
                 Apply Now!
               </Link>
