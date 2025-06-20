@@ -2,294 +2,380 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Slider from "react-slick";
-import {
-  HeartIcon,
-  GlobeAltIcon,
-  LightBulbIcon,
-  UserGroupIcon,
-  SparklesIcon,
-  StarIcon,
-} from "@heroicons/react/24/outline";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
-const images = {
-  hero: "/Reunios/assets/corosal-img17.jpg",
-  corosal1: "/Reunios/assets/corosal-img14.jpg",
-  corosal2: "/Reunios/assets/corosal-img15.jpg",
-  team: "/Reunios/assets/corosal-img10.jpg",
-  guest1: "/Reunios/assets/corosal-img1.jpg",
-  guest2: "/Reunios/assets/corosal-img13.jpg",
-  guest3: "/Reunios/assets/corosal-img14.jpg",
-  mission: "/Reunios/assets/mission.png",
-  vision: "/Reunios/assets/vision.png"
-};
-
-const missionVisionItems = [
-  {
-    title: "Our Mission",
-    description:
-      "To provide travelers with exceptional rental stays that combine comfort, convenience, and authentic local experiences.",
-    image: images.mission,
-  },
-  {
-    title: "Our Vision",
-    description:
-      "To be the trusted host brand for discerning travelers seeking stylish, hassle-free stays in prime locations worldwide.",
-    image: images.vision, // Replace with actual vision image or reuse mission image
-  },
-];
-
-const testimonials = [
-  {
-    name: "Emily R.",
-    quote:
-      "Staying here was an absolute delight — warm hospitality, gorgeous property, and seamless communication.",
-    stars: 5,
-    image: images.guest1,
-  },
-  {
-    name: "Mark P.",
-    quote:
-      "Sidharth’s rentals consistently deliver comfort and style. I highly recommend for anyone visiting the area.",
-    stars: 5,
-    image: images.guest2,
-  },
-  {
-    name: "Sara W.",
-    quote:
-      "From booking to checkout, everything was smooth and welcoming. A true home away from home.",
-    stars: 4.9,
-    image: images.guest3,
-  },
-];
-
-function About() {
+const About = () => {
   useEffect(() => {
-    AOS.init({ duration: 900, once: true });
+    AOS.init({ duration: 800, once: true });
   }, []);
 
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 700,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 9000,
-  };
+  const testimonials = [
+    {
+      name: "Emily R.",
+      quote:
+        "Staying here was an absolute delight — warm hospitality, gorgeous property, and seamless communication.",
+      stars: 5,
+      image: "",
+    },
+    {
+      name: "Mark P.",
+      quote:
+        "Sidharth's rentals consistently deliver comfort and style. I highly recommend for anyone visiting the area.",
+      stars: 5,
+      image: "",
+    },
+    {
+      name: "Sara W.",
+      quote:
+        "From booking to checkout, everything was smooth and welcoming. A true home away from home.",
+      stars: 5,
+      image: "",
+    },
+  ];
 
   return (
-    <main className="font-sans text-gray-900 bg-gradient-to-b from-cyan-50 via-white to-indigo-50 min-h-screen">
+    <main className="min-h-screen bg-gradient-to-b from-cyan-50 via-white to-indigo-50">
       {/* Hero Section */}
       <section
-        className="relative h-96 bg-fixed bg-center bg-cover flex items-center justify-center text-white"
-        style={{ backgroundImage: `url(${images.hero})` }}
+        className="relative h-screen flex items-center justify-center text-white bg-cover bg-center"
+        style={{
+          backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets/TEMP/66e35e62f5a79950576eccff46af63033a7f40a2?placeholderIfAbsent=true')`,
+        }}
       >
+        <div className="absolute inset-0 bg-black bg-opacity-30"></div>
         <div
-          className=" backdrop:via-cyan-300 p-12 rounded-xl max-w-3xl text-center"
+          className="relative z-10 text-center max-w-4xl mx-auto px-6"
           data-aos="fade-up"
         >
-          <h1 className="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-            About Reunios
-          </h1>
-          <p className="text-lg md:text-xl max-w-xl mx-auto tracking-wide">
-            Delivering exceptional stays through a curated collection of premium
-            hotel-style apartments.
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">About Reunios</h1>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto">
+            Premium vacation rentals combining comfort, style, and unforgettable
+            experiences
           </p>
         </div>
       </section>
 
-      {/* Our Story */}
-      <section
-        className="py-20 max-w-5xl mx-auto px-6 text-center"
-        data-aos="fade-up"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-cyan-700">
-          Our Story
-        </h2>
-        <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto mb-6 text-gray-800">
-          Founded by Sidharth with a vision to redefine comfort and style in
-          vacation rentals, Reunios focuses on quality, convenience, and
-          unforgettable guest experiences.
-        </p>
-        <p className="text-lg md:text-xl leading-relaxed max-w-3xl mx-auto text-gray-700">
-          Every guest deserves a stay that’s welcoming, seamless, and personal.
-          That’s why attention to detail, clear communication, and thoughtful
-          amenities are at our core.
-        </p>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-24 max-w-7xl mx-auto px-6">
-            {missionVisionItems.map(({ title, description, image }, index) => {
-              const isEven = index % 2 === 0;
-              return (
-                <div
-                  key={index}
-                  className={`grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20 ${
-                    !isEven ? "md:flex-row-reverse" : ""
-                  }`}
-                  data-aos="fade-up"
-                >
-                  <div className="flex justify-center">
-                    <img
-                      src={image}
-                      alt={title}
-                      className="rounded-xl shadow-lg max-w-full h-auto"
-                    />
-                  </div>
-                  <div className="max-w-xl mx-auto text-center md:text-left">
-                    <h2 className="text-4xl font-bold mb-6 text-cyan-700">{title}</h2>
-                    <p className="text-lg text-gray-700 leading-relaxed">{description}</p>
-                  </div>
-                </div>
-              );
-            })}
-    </section>
-
-      {/* Core Values */}
-      <section
-        className="py-20 max-w-6xl mx-auto px-6 text-center"
-        data-aos="fade-up"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-cyan-700">
-          Our Core Values
-        </h2>
-        <div className="grid md:grid-cols-3 gap-12">
-          <div className="p-6 rounded-xl shadow hover:shadow-lg transition duration-300">
-            <HeartIcon className="mx-auto h-14 w-14 text-yellow-500 mb-5" />
-            <h3 className="text-xl font-semibold mb-3">Hospitality</h3>
-            <p className="text-gray-700 leading-relaxed">
-              We treat every guest like family, delivering warmth and care.
+      {/* Our Story Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2
+            className="text-4xl font-bold text-cyan-700 mb-8"
+            data-aos="fade-up"
+          >
+            Our Story
+          </h2>
+          <div
+            className="text-lg text-gray-700 space-y-6 max-w-4xl"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <p>
+              We've all been there, excited about a trip, only to arrive at a
+              place that doesn't live up to the photos, the promises, or the
+              price. The check-in's a mess, the room's not ready, and suddenly,
+              you're scrambling to make things work. Sounds like the vacation
+              from hell, right?
             </p>
-          </div>
-          <div className="p-6 rounded-xl shadow hover:shadow-lg transition duration-300">
-            <UserGroupIcon className="mx-auto h-14 w-14 text-yellow-500 mb-5" />
-            <h3 className="text-xl font-semibold mb-3">Trust</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Transparency and reliability are the foundation of our service.
+            <p>
+              Now, picture this: You book with Reunios. No confusion. No chaos.
+              Just crystal-clear communication, clean spaces, and the promise
+              that everything works like it's supposed to. You walk in, you
+              unpack, and you start enjoying your trip. No waiting for answers.
+              No surprises.
             </p>
-          </div>
-          <div className="p-6 rounded-xl shadow hover:shadow-lg transition duration-300">
-            <SparklesIcon className="mx-auto h-14 w-14 text-yellow-500 mb-5" />
-            <h3 className="text-xl font-semibold mb-3">Quality</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Excellence in every detail, from furnishings to guest support.
+            <p>
+              Because at Reunios, we get it. The best memories aren't made by
+              worrying about the details. They're made when everything just...
+              works.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Guest Experiences - Grid Cards */}
-      <section
-        className="py-20 bg-yellow-50 max-w-7xl mx-auto px-6 rounded-xl shadow-md"
-        data-aos="fade-up"
-        aria-label="Guest Experiences"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-yellow-600">
-          Guest Experiences
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-          {testimonials.map(({ name, quote, stars, image }, idx) => (
-            <article
-              key={idx}
-              className="relative bg-white rounded-2xl shadow-lg p-8 pt-16 cursor-pointer transform transition-transform hover:scale-[1.03] duration-300"
-              tabIndex={0}
-              aria-label={`Testimonial from ${name}`}
-              data-aos="fade-up"
-              data-aos-delay={idx * 100}
-            >
-              <div className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-24 rounded-full overflow-hidden border-4 border-yellow-400 shadow-lg">
-                <img
-                  src={image}
-                  alt={`${name}'s photo`}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <p className="italic text-lg leading-relaxed text-gray-700 mb-6 mt-8">
-                “{quote}”
+      {/* What we do Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-1/2" data-aos="fade-right">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/4783134b2e5bebea1fa12b7ef1fde786915caa5e?placeholderIfAbsent=true"
+                alt="What we do"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="lg:w-1/2" data-aos="fade-left">
+              <h2 className="text-4xl font-bold text-cyan-700 mb-6">
+                What we do
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                <strong>
+                  At Reunios, we don't just manage vacation rentals; we craft
+                  seamless, reliable experiences with every detail in mind. Our
+                  mission is simple: offer guests comfort, clarity, and
+                  consistent stays that provide peace of mind, allowing them to
+                  focus on what matters most, creating lasting memories. Our
+                  guests: families, groups, and those celebrating life's
+                  milestones value clarity, trust, and efficiency, seeking
+                  stress-free stays in prime locations.
+                </strong>
               </p>
-              <p className="font-semibold text-lg text-center mb-2">{name}</p>
-              <div className="flex justify-center space-x-1">
-                {Array(5)
-                  .fill(0)
-                  .map((_, i) => (
-                    <svg
-                      key={i}
-                      aria-hidden="true"
-                      className={`w-6 h-6 ${
-                        i < Math.round(stars)
-                          ? "text-yellow-400"
-                          : "text-yellow-200"
-                      }`}
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <title>{i < Math.round(stars) ? "Filled star" : "Empty star"}</title>
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.975a1 1 0 00.95.69h4.177c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.975c.3.92-.755 1.688-1.538 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.783.57-1.838-.197-1.537-1.118l1.287-3.975a1 1 0 00-.364-1.118L2.038 9.402c-.783-.57-.38-1.81.588-1.81h4.177a1 1 0 00.95-.69l1.286-3.975z" />
-                    </svg>
-                  ))}
-              </div>
-            </article>
-          ))}
+              <p className="text-lg text-gray-700 leading-relaxed mt-4">
+                <strong>
+                  For our team, we offer a growth-driven environment that
+                  balances autonomy with support, empowering everyone to
+                  contribute to our commitment to excellence.
+                </strong>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
+      {/* Where we are going Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-1/2" data-aos="fade-right">
+              <h2 className="text-4xl font-bold text-cyan-700 mb-6">
+                Where we are going
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                <strong>
+                  To redefine how people experience vacations. We believe every
+                  trip should be effortless, from booking to check-out. Our
+                  vision is to set a new standard for vacation rentals, where
+                  peace of mind is the baseline, and no one has to worry about
+                  the little things. We aim to build a global brand that
+                  delivers a trustworthy, well-executed experience, consistently
+                  across every destination.
+                </strong>
+              </p>
+            </div>
+            <div className="lg:w-1/2" data-aos="fade-left">
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/8d4953ddfdb090e4b8452e16d40eac29874c9ff9?placeholderIfAbsent=true"
+                alt="Where we are going"
+                className="w-full rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-      {/* Meet the Host */}
-      <section
-        className="py-20 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
-        data-aos="fade-up"
-      >
-        <img
-          src={images.team}
-          alt="Host Sidharth"
-          className="rounded-xl shadow-lg"
-        />
-        <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Meet Sidharth</h2>
-          <p className="text-lg md:text-xl mb-6 leading-relaxed text-gray-800">
-            As your dedicated host, Sidharth ensures every stay is personalized
-            and memorable. His passion for hospitality drives the quality and
-            warmth you experience at every property.
-          </p>
-          <p className="text-lg md:text-xl leading-relaxed text-gray-700">
-            Feel free to reach out with any questions or special requests — we
-           ’re here to make your visit exceptional.
+      {/* How we deliver excellence Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h2
+            className="text-4xl font-bold text-cyan-700 mb-16"
+            data-aos="fade-up"
+          >
+            How we deliver excellence
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div
+              className="bg-white rounded-xl p-8 shadow-lg"
+              data-aos="fade-up"
+            >
+              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-100 rounded-full flex items-center justify-center">
+                <svg
+                  className="w-8 h-8 text-yellow-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Clear & Proactive Communication
+              </h3>
+              <p className="text-gray-600">
+                We keep you informed at every step, offering full transparency
+                and thoughtful service that anticipates your needs and ensures
+                peace of mind.
+              </p>
+            </div>
+
+            <div
+              className="bg-white rounded-xl p-8 shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-100 rounded-full flex items-center justify-center">
+                <svg
+                  className="w-8 h-8 text-yellow-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Seamless & Trusted Hospitality
+              </h3>
+              <p className="text-gray-600">
+                Professionally managed, well-maintained properties that ensure a
+                stress-free experience, free of surprises
+              </p>
+            </div>
+
+            <div
+              className="bg-white rounded-xl p-8 shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-100 rounded-full flex items-center justify-center">
+                <svg
+                  className="w-8 h-8 text-yellow-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Guest-Centered Excellence
+              </h3>
+              <p className="text-gray-600">
+                From booking to checkout, every detail is designed around guest
+                comfort, convenience, and satisfaction, ensuring you enjoy a
+                truly effortless stay.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Guest Experiences Section */}
+      <section className="py-20 bg-yellow-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2
+            className="text-4xl font-bold text-yellow-700 text-center mb-16"
+            data-aos="fade-up"
+          >
+            Guest Experiences
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-8 shadow-lg text-center relative pt-16"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-yellow-400 rounded-full border-4 border-yellow-400"></div>
+                <p className="italic text-gray-600 mb-6">
+                  "{testimonial.quote}"
+                </p>
+                <h4 className="font-bold text-gray-900 mb-2">
+                  {testimonial.name}
+                </h4>
+                <div className="flex justify-center space-x-1">
+                  {Array(5)
+                    .fill(0)
+                    .map((_, i) => (
+                      <svg
+                        key={i}
+                        className={`w-5 h-5 ${i < testimonial.stars ? "text-yellow-400" : "text-gray-300"}`}
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.975a1 1 0 00.95.69h4.177c.969 0 1.371 1.24.588 1.81l-3.38 2.455a1 1 0 00-.364 1.118l1.287 3.975c.3.92-.755 1.688-1.538 1.118l-3.38-2.455a1 1 0 00-1.175 0l-3.38 2.455c-.783.57-1.838-.197-1.537-1.118l1.287-3.975a1 1 0 00-.364-1.118L2.038 9.402c-.783-.57-.38-1.81.588-1.81h4.177a1 1 0 00.95-.69l1.286-3.975z" />
+                      </svg>
+                    ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Amenities Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            <div className="lg:w-1/2" data-aos="fade-right">
+              <img
+                src=""
+                alt="Host Sidharth"
+                className="w-full h-80 bg-gray-300 rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="lg:w-1/2" data-aos="fade-left">
+              <h2 className="text-4xl font-bold text-cyan-700 mb-6">
+                Amenities that actually matter
+              </h2>
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                <strong>
+                  We don't waste your time with fancy perks you'll never use.
+                  Our amenities are built to make your stay easy and
+                  comfortable, from pools hot tub and gyms, game rooms to
+                  lounges and 24/7 support. Because you deserve clean spaces,
+                  clear communication and a seamless and enjoyable getaway, with
+                  no surprises.
+                </strong>
+              </p>
+              <Link
+                to="/contact"
+                className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold 
+                         hover:bg-yellow-500 transition-colors transform hover:scale-105 shadow-lg"
+              >
+                Book now
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Join Our Team CTA */}
+      <section className="py-20 bg-yellow-50">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2
+            className="text-4xl font-bold text-gray-900 mb-6"
+            data-aos="fade-up"
+          >
+            Interested in Joining Our Team?
+          </h2>
+          <p
+            className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            At Reunios, We're not just hiring for positions we're building a
+            team of passionate, driven individuals who care about what they do.
+            Explore our careers page to learn more.
           </p>
           <Link
-            to="/contact"
-            className="mt-8 inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold hover:bg-yellow-500 transition"
+            to="/careers"
+            className="inline-block bg-yellow-700 text-white px-8 py-4 rounded-full font-semibold 
+                     hover:bg-yellow-800 transition-colors transform hover:scale-105 shadow-lg"
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
-            Contact Sidharth
+            Apply Now
           </Link>
         </div>
       </section>
-
-      {/* Careers CTA */}
-      <section
-        className="py-20 bg-yellow-50 text-center rounded-t-3xl mt-24"
-        data-aos="zoom-in"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          Interested in Joining Our Team?
-        </h2>
-        <p className="text-gray-700 mb-10 max-w-2xl mx-auto text-lg md:text-xl">
-          We're always looking for passionate hospitality professionals to help
-          us deliver exceptional stays. Explore our careers page to learn more.
-        </p>
-        <Link
-          to="/careers"
-          className="bg-yellow-600 text-white px-12 py-4 rounded-full font-semibold hover:bg-yellow-700 transition"
-        >
-          View Careers
-        </Link>
-      </section>
     </main>
   );
-}
+};
 
 export default About;
