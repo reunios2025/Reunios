@@ -149,7 +149,7 @@ const Home = () => {
           </div>
 
           <p
-            className="text-2xl font-bold text-gray-900"
+            className="text-2xl font-bold text-slate-900"
             data-aos="fade-up"
             data-aos-delay="300"
           >
@@ -160,7 +160,7 @@ const Home = () => {
       </section>
 
       {/* Separator */}
-      <div className="h-1 bg-yellow-400 max-w-6xl mx-auto"></div>
+      <div className="h-1 bg-orange-500 max-w-6xl mx-auto"></div>
 
       {/* How We Work Section */}
       <section className="py-20 bg-white">
