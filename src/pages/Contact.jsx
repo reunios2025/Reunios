@@ -383,71 +383,131 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Additional FAQ Text */}
+      {/* Additional Information Section */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-sm text-gray-700 leading-relaxed space-y-4">
-            <p>
-              <strong>
+          <h3
+            className="text-3xl font-bold text-gray-900 text-center mb-12"
+            data-aos="fade-up"
+          >
+            Everything You Need to Know
+          </h3>
+
+          <div className="space-y-8 text-gray-700 leading-relaxed">
+            <div data-aos="fade-up">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
                 What makes Reunios different from other vacation rental
-                management companies?
-              </strong>
-            </p>
+                companies?
+              </h4>
+              <p>
+                At Reunios, we don't just offer a place to stay; we deliver a
+                seamless, peace of mind experience. Our focus is on clarity,
+                consistency, and reliability, ensuring every stay is
+                well-managed from the moment you book to the moment you check
+                out. We combine the comfort of home with the convenience of
+                hotel-style services, so you can focus on what matters most -
+                making lasting memories, not worrying about logistics.
+              </p>
+            </div>
 
-            <p>
-              <strong>What types of properties does Reunios manage?</strong> We
-              specialize in vacation rentals that combine the comfort of home
-              with the convenience of a hotel. Our properties are strategically
-              located in top destinations across the U.S., offering guests the
-              best of both worlds.
-            </p>
+            <div data-aos="fade-up">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                What types of properties does Reunios manage?
+              </h4>
+              <p>
+                We specialize in premium vacation rentals that combine the
+                comfort of home with the convenience of a hotel. Our properties
+                are strategically located in top destinations across the U.S.,
+                including mountain retreats, beachfront homes, urban condos, and
+                family-friendly resort-style properties. Each property features
+                premium amenities like hot tubs, pools, gourmet kitchens, and
+                spacious living areas perfect for groups and families.
+              </p>
+            </div>
 
-            <p>
-              At Reunios, we don't just offer a place to stay; we deliver a
-              seamless, peace of mind experience. Our focus is on clarity,
-              consistency, and reliability, ensuring every stay is well-managed,
-              from the moment you book to the moment you check out. We combine
-              the comfort of home with the convenience of hotel-style services,
-              so you can focus on what matters most, making lasting memories,
-              not worrying about logistics.
-            </p>
+            <div data-aos="fade-up">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                How does Reunios ensure property quality and cleanliness?
+              </h4>
+              <p>
+                We maintain the highest standards through rigorous property
+                inspections, professional cleaning services, and regular
+                maintenance. Each property undergoes thorough cleaning and
+                sanitization between guests, and we conduct regular quality
+                checks to ensure everything meets our exacting standards. Our
+                properties feature hotel-quality linens, fully stocked kitchens,
+                and well-maintained amenities.
+              </p>
+            </div>
 
-            <p>
-              <strong>How does Reunios handle guest communication?</strong> We
-              maintain 24/7 support, ensuring that guests feel fully informed
-              and taken care of at all times. Our team responds quickly,
-              typically within an hour, so you can relax knowing we've got it
-              covered.
-            </p>
+            <div data-aos="fade-up">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                What areas do you serve?
+              </h4>
+              <p>
+                Reunios operates in prime vacation destinations across the
+                United States, including popular mountain towns, beach
+                communities, and resort areas. Our properties are located in
+                destinations like Park City, Utah; Kihei, Hawaii; Marina Dunes,
+                California; and Indio, California, with plans to expand to
+                additional premium locations based on guest demand.
+              </p>
+            </div>
 
-            <p>
-              <strong>
-                Can I rent properties for longer stays or monthly bookings?
-              </strong>{" "}
-              While we focus on short-term stays (typically 3 to 7 nights), we
-              occasionally accommodate longer-term bookings depending on
-              property availability. Please reach out to us directly for custom
-              requests.
-            </p>
+            <div data-aos="fade-up">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                Do you offer group discounts or corporate rates?
+              </h4>
+              <p>
+                Yes! We offer competitive rates for group bookings, corporate
+                retreats, and extended stays. Our properties are perfect for
+                family reunions, wedding parties, corporate team-building
+                events, and other group gatherings. Contact our reservations
+                team to discuss group pricing and availability for your specific
+                needs.
+              </p>
+            </div>
 
-            <p>
-              <strong>Are the properties family-friendly?</strong> Yes, most of
-              our properties are perfect for families and large groups. We offer
-              family-friendly amenities such as spacious living areas, multiple
-              bedrooms, pools, and lounges, designed to make your stay as
-              comfortable as possible.
-            </p>
+            <div data-aos="fade-up">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                What if I need to modify or cancel my reservation?
+              </h4>
+              <p>
+                We understand that travel plans can change. Our flexible booking
+                policies allow modifications and cancellations with adequate
+                notice. Specific terms depend on the property and booking
+                platform, but we always work with guests to find solutions when
+                unexpected changes arise. Contact our support team as soon as
+                possible if you need to make changes to your reservation.
+              </p>
+            </div>
 
-            <p>
-              <strong>
-                How do I know the property I book is exactly what is listed?
-              </strong>{" "}
-              We ensure all properties are accurately listed and
-              well-maintained. Our detailed, up-to-date listings include photos
-              and comprehensive descriptions, so you can book with confidence.
-              If you ever have questions about a property, our team is always
-              available to assist.
-            </p>
+            <div data-aos="fade-up">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                How do I know I'm getting the best rate?
+              </h4>
+              <p>
+                We strive to offer competitive pricing while maintaining the
+                highest quality standards. Our rates reflect the premium
+                amenities, professional management, and exceptional service that
+                come with every Reunios property. We occasionally offer seasonal
+                promotions and repeat guest discounts - sign up for our
+                newsletter to stay informed about special offers.
+              </p>
+            </div>
+
+            <div data-aos="fade-up">
+              <h4 className="text-xl font-bold text-gray-900 mb-3">
+                Still have questions?
+              </h4>
+              <p>
+                Our knowledgeable support team is here to help! Whether you have
+                questions about specific properties, booking policies, or need
+                assistance during your stay, we're just a phone call or email
+                away. Reach out to us at reservations@hottubcondos.com or call
+                +1 (555) 123-4567, and we'll be happy to assist you.
+              </p>
+            </div>
           </div>
         </div>
       </section>
