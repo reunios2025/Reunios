@@ -101,19 +101,19 @@ const Home = () => {
       </section>
 
       {/* Separator */}
-      <div className="h-1 bg-yellow-400 max-w-6xl mx-auto"></div>
+      <div className="h-1 bg-orange-500 max-w-6xl mx-auto"></div>
 
       {/* Top Destinations Section */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2
-            className="text-4xl md:text-5xl font-bold text-gray-900 mb-8"
+            className="text-4xl md:text-5xl font-bold text-slate-900 mb-8"
             data-aos="fade-up"
           >
             Explore our top destination
           </h2>
           <p
-            className="text-xl text-gray-700 max-w-4xl mx-auto mb-12"
+            className="text-xl text-slate-700 max-w-4xl mx-auto mb-12"
             data-aos="fade-up"
             data-aos-delay="100"
           >
