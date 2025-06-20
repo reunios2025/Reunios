@@ -102,7 +102,10 @@ const Careers = () => {
           backgroundColor: "#f0f0f0",
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}
+        ></div>
         <div
           className="relative z-10 text-center max-w-4xl mx-auto px-6"
           data-aos="fade-up"
@@ -120,14 +123,14 @@ const Careers = () => {
           <div className="flex flex-wrap gap-6 justify-center">
             <Link
               to="#openings"
-              className="bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold 
+              className="bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold
                        hover:bg-yellow-500 transition-colors transform hover:scale-105 shadow-lg"
             >
               Explore Openings
             </Link>
             <Link
               to="/contact"
-              className="border border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-semibold 
+              className="border border-yellow-400 text-yellow-400 px-8 py-4 rounded-lg font-semibold
                        hover:bg-yellow-400 hover:text-black transition-colors shadow-lg"
             >
               Contact Us
@@ -460,7 +463,7 @@ const Careers = () => {
           </p>
           <Link
             to="/contact"
-            className="inline-block bg-yellow-700 text-white px-8 py-4 rounded-full font-semibold 
+            className="inline-block bg-yellow-700 text-white px-8 py-4 rounded-full font-semibold
                      hover:bg-yellow-800 transition-colors transform hover:scale-105 shadow-lg"
             data-aos="fade-up"
             data-aos-delay="200"
