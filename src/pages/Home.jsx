@@ -39,66 +39,76 @@ const Home = () => {
       {/* Mission Section */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
-            <div className="lg:w-1/2" data-aos="fade-right">
-              <div className="h-1 w-12 bg-orange-500 mb-6"></div>
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
-                You only get one shot at that perfect trip... don't leave it to
-                chance!
-              </h2>
-              <p className="text-xl text-slate-700 mb-6">
-                We don't just offer vacation rentals, we deliver peace of mind.
-              </p>
-              <p className="text-lg text-slate-600 mb-6">
+          {/* Text Content at Top */}
+          <div className="text-center mb-16" data-aos="fade-up">
+            <div className="h-1 w-12 bg-orange-500 mb-6 mx-auto"></div>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 max-w-4xl mx-auto">
+              You only get one shot at that perfect trip... don't leave it to
+              chance!
+            </h2>
+            <p className="text-xl text-slate-700 mb-6 max-w-3xl mx-auto">
+              We don't just offer vacation rentals, we deliver peace of mind.
+            </p>
+            <div className="max-w-4xl mx-auto space-y-6 text-lg text-slate-600">
+              <p>
                 Our mission: reliable, stress-free stays in prime U.S.
                 destinations, with no surprises. Whether it's a family vacation,
                 reunion, or milestone trip, we eliminate the hassles: unexpected
                 costs, delays, and confusion, so you can enjoy your time.
               </p>
-              <p className="text-lg text-slate-600 mb-6">
+              <p>
                 Our global team works behind the scenes to make every stay
                 seamless, secure, and easy. That's why we're built on one simple
                 principle: Consistently Easy Stays, managed by people who care
                 about the experience you deserve.
               </p>
-              <p className="text-lg text-slate-600 mb-8">
+              <p className="mb-8">
                 Join us in creating unforgettable, seamless experiences for our
                 guests. Every stay, every time.
               </p>
-              <Link
-                to="/careers"
-                className="inline-block bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold
-                         hover:bg-orange-600 transition-colors transform hover:scale-105 shadow-lg"
-              >
-                Apply Now!
-              </Link>
             </div>
-            <div className="lg:w-1/2" data-aos="fade-left">
-              <div className="grid grid-cols-2 gap-4">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ff005d0905a6911b8ea78640d8e60edf97f8408?placeholderIfAbsent=true"
-                  alt="Vacation rental property"
-                  className="w-full h-96 object-cover rounded-lg"
-                />
-                <div className="space-y-4">
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b8a8f9164801424651b8417846b97f942afb919?placeholderIfAbsent=true"
-                    alt="Vacation rental interior"
-                    className="w-full h-44 object-cover rounded-lg"
-                  />
-                  <img
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/0aa25b852687dc4d3bfda92a56218f62f31342a7?placeholderIfAbsent=true"
-                    alt="Vacation rental amenities"
-                    className="w-full h-44 object-cover rounded-lg"
-                  />
-                </div>
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/1bbc683eee7d7de4b12c3de86a3b821a5b746181?placeholderIfAbsent=true"
-                  alt="Vacation rental exterior"
-                  className="w-full h-96 object-cover rounded-lg col-span-1"
-                />
-              </div>
-            </div>
+            <Link
+              to="/careers"
+              className="inline-block bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold
+                       hover:bg-orange-600 transition-colors transform hover:scale-105 shadow-lg"
+            >
+              Apply Now!
+            </Link>
+          </div>
+
+          {/* Images Grid Below */}
+          <div
+            className="grid grid-cols-4 gap-4 h-96"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            {/* Large image on left - spans 2 columns and full height */}
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/9ff005d0905a6911b8ea78640d8e60edf97f8408?placeholderIfAbsent=true"
+              alt="Vacation rental property"
+              className="col-span-2 row-span-2 w-full h-full object-cover rounded-lg"
+            />
+
+            {/* Top right image */}
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/3b8a8f9164801424651b8417846b97f942afb919?placeholderIfAbsent=true"
+              alt="Vacation rental interior"
+              className="col-span-1 w-full h-44 object-cover rounded-lg"
+            />
+
+            {/* Second image on right */}
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/0aa25b852687dc4d3bfda92a56218f62f31342a7?placeholderIfAbsent=true"
+              alt="Vacation rental amenities"
+              className="col-span-1 w-full h-44 object-cover rounded-lg"
+            />
+
+            {/* Bottom right image - spans 2 columns */}
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/1bbc683eee7d7de4b12c3de86a3b821a5b746181?placeholderIfAbsent=true"
+              alt="Vacation rental exterior"
+              className="col-span-2 w-full h-44 object-cover rounded-lg"
+            />
           </div>
         </div>
       </section>
