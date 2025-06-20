@@ -244,10 +244,10 @@ const Home = () => {
       </section>
 
       {/* Why Choose Our Rentals Section */}
-      <section className="py-20 bg-yellow-50">
+      <section className="py-20 bg-slate-50">
         <div className="max-w-6xl mx-auto px-6">
           <h2
-            className="text-4xl font-bold text-cyan-700 text-center mb-16"
+            className="text-4xl font-bold text-slate-900 text-center mb-16"
             data-aos="fade-up"
           >
             Why Choose Our Rentals?
@@ -255,12 +255,12 @@ const Home = () => {
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             <div
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
+              className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow"
               data-aos="fade-up"
             >
-              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-100 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-orange-100 rounded-full flex items-center justify-center">
                 <svg
-                  className="w-8 h-8 text-yellow-600"
+                  className="w-8 h-8 text-orange-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -273,22 +273,22 @@ const Home = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
                 Seamless & Trusted Hospitality
               </h3>
-              <p className="text-gray-600">
+              <p className="text-slate-600">
                 Professionally managed stays with zero surprises.
               </p>
             </div>
 
             <div
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
+              className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-100 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-cyan-100 rounded-full flex items-center justify-center">
                 <svg
-                  className="w-8 h-8 text-yellow-600"
+                  className="w-8 h-8 text-cyan-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -301,23 +301,23 @@ const Home = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
                 Highly Rated by Guests
               </h3>
-              <p className="text-gray-600">
+              <p className="text-slate-600">
                 Enjoy stays rated 4.8+ stars thanks to attention to detail and
                 exceptional hospitality.
               </p>
             </div>
 
             <div
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
+              className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-100 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-slate-100 rounded-full flex items-center justify-center">
                 <svg
-                  className="w-8 h-8 text-yellow-600"
+                  className="w-8 h-8 text-slate-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -336,10 +336,10 @@ const Home = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
                 Great Value in Prime Locations
               </h3>
-              <p className="text-gray-600">
+              <p className="text-slate-600">
                 Top-tier destinations without the luxury price tag
               </p>
             </div>
@@ -347,12 +347,12 @@ const Home = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             <div
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
+              className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow"
               data-aos="fade-up"
             >
-              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-100 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-orange-100 rounded-full flex items-center justify-center">
                 <svg
-                  className="w-8 h-8 text-yellow-600"
+                  className="w-8 h-8 text-orange-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -365,22 +365,22 @@ const Home = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
                 Clear & Proactive Communication
               </h3>
-              <p className="text-gray-600">
+              <p className="text-slate-600">
                 We keep you informed from booking to checkout
               </p>
             </div>
 
             <div
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
+              className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow"
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-100 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-cyan-100 rounded-full flex items-center justify-center">
                 <svg
-                  className="w-8 h-8 text-yellow-600"
+                  className="w-8 h-8 text-cyan-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -393,22 +393,22 @@ const Home = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
                 Guest-Centered Excellence
               </h3>
-              <p className="text-gray-600">
+              <p className="text-slate-600">
                 Every detail is designed around your comfort and convenience.
               </p>
             </div>
 
             <div
-              className="bg-white rounded-xl p-8 shadow-lg text-center"
+              className="bg-white rounded-xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div className="w-16 h-16 mx-auto mb-6 bg-yellow-100 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 mx-auto mb-6 bg-slate-100 rounded-full flex items-center justify-center">
                 <svg
-                  className="w-8 h-8 text-yellow-600"
+                  className="w-8 h-8 text-slate-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -427,17 +427,20 @@ const Home = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
+              <h3 className="text-xl font-bold text-slate-900 mb-4">
                 Full Access to Amenities
               </h3>
-              <p className="text-gray-600">
+              <p className="text-slate-600">
                 Pools, gyms, hot tubs, lounges. No hidden fees, no locked doors
               </p>
             </div>
           </div>
 
           <div className="text-center mt-16">
-            <h3 className="text-3xl font-bold text-gray-900" data-aos="fade-up">
+            <h3
+              className="text-3xl font-bold text-slate-900"
+              data-aos="fade-up"
+            >
               We don't do fancy gimmicks just straightforward, no-surprise
               stays.
             </h3>
