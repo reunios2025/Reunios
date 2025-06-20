@@ -107,8 +107,8 @@ const Contact = () => {
           </p>
           <a
             href="#contact-form"
-            className="inline-block bg-yellow-400 text-black px-8 py-4 rounded-lg font-semibold
-                     hover:bg-yellow-500 transition-colors transform hover:scale-105 shadow-lg"
+            className="inline-block bg-orange-500 text-white px-8 py-4 rounded-lg font-semibold
+                     hover:bg-orange-600 transition-colors transform hover:scale-105 shadow-lg"
           >
             Contact Us Now
           </a>
