@@ -38,10 +38,13 @@ const Contact = () => {
       <section
         className="relative h-screen flex items-center justify-center text-white bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets/TEMP/e5fd2742d1e022e0b07cc3fa369bd1640200d8e3?placeholderIfAbsent=true')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')`,
         }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.4)" }}
+        ></div>
         <div
           className="relative z-10 text-center max-w-4xl mx-auto px-6"
           data-aos="fade-up"
