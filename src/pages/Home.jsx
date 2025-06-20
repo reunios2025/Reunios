@@ -38,8 +38,8 @@ const Home = () => {
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="lg:w-1/2" data-aos="fade-right">
-              <div className="h-1 w-12 bg-yellow-400 mb-6"></div>
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
+              <div className="h-1 w-12 bg-orange-500 mb-6"></div>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8">
                 You only get one shot at that perfect trip... don't leave it to
                 chance!
               </h2>
